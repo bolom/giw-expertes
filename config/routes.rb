@@ -5,6 +5,9 @@ Rails.application.routes.draw do
   resources :profiles
 
   root to: "pages#home"
+  get 'about'    => 'pages'
+  get 'sponsors' => 'pages'
+  get 'contact'  => 'pages'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
