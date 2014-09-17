@@ -41,3 +41,7 @@ gem 'spring',        group: :development
 gem 'haml'
 gem 'activeadmin', github: 'activeadmin'
 gem 'devise'
+
+group :production do
+  gem 'pg'
+end
