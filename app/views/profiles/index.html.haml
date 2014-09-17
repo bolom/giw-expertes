@@ -1,0 +1,10 @@
+%h1 Les expertes
+
+%section
+  - @profiles.each do |profile|
+    %div
+      %h2
+        = profile.firstname
+        = profile.lastname
+
+      .linked_in_url= link_to profile.linked_in_url
