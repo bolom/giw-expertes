@@ -1,0 +1,11 @@
+%h1 Quelques expertes du réseau
+
+%div
+  - @random_profiles.each do |profile|
+    %div
+      %h3
+        = link_to(profile) do
+          = profile.firstname
+          = profile.lastname
+
+      .linked_in_url= link_to profile.linked_in_url

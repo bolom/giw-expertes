@@ -5,7 +5,6 @@ Rails.application.routes.draw do
   resources :profiles
 
   root to: "pages#home"
-  get 'about'    => 'pages'
   get 'sponsors' => 'pages'
   get 'contact'  => 'pages'
 

@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
   def home
-    @profiles = Profile.active.order(:created_at).last(3)
+    @random_profiles = Profile.active.order_by_rand.limit(3)
   end
 end

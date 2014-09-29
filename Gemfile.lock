@@ -47,7 +47,11 @@ GEM
     arbre (1.0.2)
       activesupport (>= 3.0.0)
     arel (5.0.1.20140414130214)
+    autoprefixer-rails (3.1.0.20140911)
+      execjs
     bcrypt (3.1.7)
+    bootstrap-sass (3.2.0.2)
+      sass (~> 3.2)
     bourbon (3.2.3)
       sass (~> 3.2)
       thor
@@ -124,6 +128,10 @@ GEM
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
     rake (10.3.2)
+    randumb (0.5.0)
+      activerecord (>= 3.0.0)
+      activesupport (>= 3.0.0)
+      rake
     ransack (1.4.1)
       actionpack (>= 3.0)
       activerecord (>= 3.0)
@@ -157,8 +165,6 @@ GEM
     thor (0.19.1)
     thread_safe (0.3.4)
     tilt (1.4.1)
-    turbolinks (2.3.0)
-      coffee-rails
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
     uglifier (2.5.3)
@@ -172,6 +178,8 @@ PLATFORMS
 
 DEPENDENCIES
   activeadmin!
+  autoprefixer-rails
+  bootstrap-sass (~> 3.2.0)
   coffee-rails (~> 4.0.0)
   devise
   haml
@@ -180,9 +188,9 @@ DEPENDENCIES
   pg
   rails (= 4.1.6)
   rails_12factor
+  randumb
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)
   spring
   sqlite3
-  turbolinks
   uglifier (>= 1.3.0)
