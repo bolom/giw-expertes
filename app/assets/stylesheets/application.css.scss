@@ -15,3 +15,102 @@
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+
+// Place all the styles related to the profiles controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+/*
+---------------------------------- 
+  VARIABLES
+----------------------------------
+*/
+
+
+$blue: #0cbef0;
+$bluestrong: #11657d;
+$pink: #ff3654;
+
+
+/*
+---------------------------------- 
+  COMMON
+----------------------------------
+*/
+
+.wrapper{max-width: 960px; width: 100%; margin: 0 auto;}
+
+.blue{color: $blue;}
+.pink{color: $pink;}
+
+body{font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; font-weight: 300;}
+
+/*
+---------------------------------- 
+  NAVIGATION
+----------------------------------
+*/
+
+#topnav{background: #444; height: 40px; width: 100%; border-bottom: 1px solid white; margin: 0;
+    ul, li{list-style: none; position: relative; padding: 0; margin: 0;}
+    ul{float: right;}
+    li{display: inline-block;
+      a{color: white; text-decoration: none; line-height: 40px;}
+      a:after{content:" - "; display: inline-block; margin: 0 0 0 5px; line-height: 40px; position: relative;}
+    }
+}
+
+
+/*
+---------------------------------- 
+  HEADER
+----------------------------------
+*/
+
+header{
+  h1{display: block; position: relative; margin: 0 auto; text-indent: -9999px;}
+}
+
+.home{
+  .main{width: 100%; height: 733px; background: blue;
+    .img{width: 100%; height: 100%; background: url(asset-path('bg-main.png')) no-repeat; position: relative; margin: 0 auto; background-position: center center; background-size: cover;
+      h1{background: url(asset-path('big-giw.png')) no-repeat; width: 330px; height: 212px; top: 85px; position: relative;}
+    }
+    p{top: 125px; position: relative; text-align: center; font-size: 24px; color: white; font-weight: 100; max-width: 470px; width: 100%;}
+  }
+}
+
+/*
+---------------------------------- 
+  SEARCH FORM
+----------------------------------
+*/
+
+
+.home #searchform{top: 220px;}
+
+#searchform{position: relative; font-weight: 100;
+  input, select{font-size: 26px; border: none; height: 56px; color: $bluestrong;}
+  span{color: white; font-size: 24px;}
+  input[type=submit]{background: $pink; border: 1px solid white; border-radius: 0; color: white; padding: 0 10px 0 50px; position: relative;}
+  input[type=submit]:before{position: absolute; top: 4px; left: 20px; background: url(asset-path('search.png')) no-repeat; width: 31px; height: 31px; content: " ";}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

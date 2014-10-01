@@ -9,10 +9,32 @@
     = javascript_include_tag 'application'
     = csrf_meta_tags
 
-  %body
+  %body{ class: "#{controller_name} #{action_name}" }
     %header
-      %h1= link_to "Les Expertes du Numérique", root_path
-
+      %div#topnav
+        %ul
+          %li
+            %a{ href: 'http://www.girlzinweb.com', title: 'Girlz in web' } Girlz in web
+          %li
+            %a{ href: 'http://girlzinweb.com/charte-editoriale/', title: 'Charte éditoriale' } Charte éditoriale
+          %li
+            %a{ href: 'http://girlzinweb.com/a-propos/contribuer/', title: 'Participer' } Participer
+          %li
+            %a{ href: 'http://girlzinweb.com/auteures/', title: 'Auteures' } Auteures
+          %li
+            %a{ href: 'http://girlzinweb.com/adherent-e-s-giw/', title: 'Accès Adhérent-e-s GIW' } Accès Adhérent-e-s GIW
+          %li
+            %a{ href: 'http://girlzinweb.com/contact/', title: 'Contacts' } Contacts
+            
+      %div.main
+        %div.img
+          %h1= link_to "Les Expertes du Numérique", root_path
+          %p.wrapper
+            Vestibulum id ligula porta felis euismod semper. Donec id elit non mi porta gravida at eget metus.
+      
+          
+          = render 'pages/profile_search_form'
+          
     = yield
 
     %footer
