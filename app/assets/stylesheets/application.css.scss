@@ -10,11 +10,12 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
- *= require_self
  */
+ 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "bootstrap-select";
+
 
 
 // Place all the styles related to the profiles controller here.
@@ -46,6 +47,11 @@ $pink: #ff3654;
 .pink{color: $pink;}
 
 body{font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; font-weight: 300;}
+
+*::-webkit-input-placeholder{color: $bluestrong;}
+*:-moz-placeholder{color: $bluestrong;}
+*::-moz-placeholder{color: $bluestrong;}
+*:-ms-input-placeholder{color: $bluestrong;}
 
 /*
 ---------------------------------- 
@@ -92,11 +98,38 @@ header{
 .home #searchform{top: 220px;}
 
 #searchform{position: relative; font-weight: 100;
-  input, select{font-size: 26px; border: none; height: 56px; color: $bluestrong;}
-  span{color: white; font-size: 24px;}
-  input[type=submit]{background: $pink; border: 1px solid white; border-radius: 0; color: white; padding: 0 10px 0 50px; position: relative;}
-  input[type=submit]:before{position: absolute; top: 4px; left: 20px; background: url(asset-path('search.png')) no-repeat; width: 31px; height: 31px; content: " ";}
+  input{font-size: 26px; border: none; height: 56px; color: $bluestrong; line-height: 52px; padding: 0 20px; display: inline-block;}
+  input[type=submit]{background: $pink; border: 1px solid white; border-radius: 0; color: white; padding: 0 20px 0 60px; position: relative; z-index: 1; text-shadow: 0;}
+  .or{color: white; font-size: 24px;margin: 0 10px; display: inline-block; position: relative;}
+  .form-group{display: inline-block;}
+  .picto{position: relative; top: 6px; left: 60px; background: url(asset-path('search.png')) no-repeat; width: 31px; height: 31px; content: " "; z-index: 2; display: inline-block;}
+  .byname{background: url(asset-path('bg-field-transparent.png')) repeat; width: 220px;}
+  
+  /* BOOTSTRAP */
+  .show-tick{height: 0; width: 0; margin: 0; padding: 0; position: relative;}
+  button.btn.dropdown-toggle.selectpicker.btn-default{height: 56px; border-radius: 0; width: 370px; margin: 0; border: 0; font-size: 26px; color: $bluestrong;}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
