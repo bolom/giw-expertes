@@ -39,4 +39,24 @@
     = yield
 
     %footer
-      Mentions légales etc...
+      %nav
+        %ul
+          %li
+            %a{ href: 'http://www.girlzinweb.com', title: 'Girlz in web' } Girlz in web
+          %li
+            %a{ href: 'http://girlzinweb.com/charte-editoriale/', title: 'Charte éditoriale' } Charte éditoriale
+          %li
+            %a{ href: 'http://girlzinweb.com/a-propos/contribuer/', title: 'Participer' } Participer
+          %li
+            %a{ href: 'http://girlzinweb.com/auteures/', title: 'Auteures' } Auteures
+          %li
+            %a{ href: 'http://girlzinweb.com/adherent-e-s-giw/', title: 'Accès Adhérent-e-s GIW' } Accès Adhérent-e-s GIW
+          %li
+            %a{ href: 'http://girlzinweb.com/contact/', title: 'Contacts' } Contacts
+      %span.giw
+      %p.copyright
+        © Girlz in web
+        = Date.current.year
+        — tous droits réservés
+      
+    
