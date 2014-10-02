@@ -2,12 +2,13 @@
   %form#searchform{ method: 'POST'}
     %input{ name: 'byname', value: '', placeholder: 'prénom, nom', class: "byname"}
     %span.or ou
-    %div.form-group
+    %div.form-group.selectbox
       %select{ id: 'byexpertise', name: 'byexpertise', multiple: true, title:"toutes les expertises", class: 'form-control input-sm selectpicker'}
         %option{ value: "test1"}test 1
         %option{ value: "test2"}test 2
         %option{ value: "test3"}test 3
         %option{ value: "test4"}test 4
+        %option{ value: "test5"}test 5
     
     %span.picto
     %input{ name: 'submit', value: 'trouver une experte', type: 'submit'}
