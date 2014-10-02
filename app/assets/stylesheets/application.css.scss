@@ -71,6 +71,8 @@ a,button,input,div,span,p{
 .button{text-decoration: none; padding: 0 20px; line-height: 54px; height: 56px; position: relative; text-align: center; font-size: 26px; width: auto; font-weight: 700; display: inline-block; margin: 50px 0 0 0;}
 .button:hover{top: -5px; text-decoration: none;}
 
+.tmp{font-size: 12px; width: 200px; margin: 0 auto; text-align: center;}
+
 body{font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; font-weight: 300;}
 
 h2{font-family: "Hoefler"; color: $blue; font-size: 48px; text-align: center;}
@@ -86,6 +88,8 @@ section{padding: 50px 0; text-align: center;
 
 ::selection{background: rgba(0,0,0,0.6); color: white;}
 ::-moz-selection{background: rgba(0,0,0,0.6); color: white;}
+
+
 
 /*
 ---------------------------------- 
@@ -118,12 +122,16 @@ header{
 }
 
 .home{
-  .main{width: 100%; height: 733px; background: blue;
+  .main{width: 100%; height: 733px; background: $blue;
     .img{width: 100%; height: 100%; background: url(asset-path('bg-main.png')) no-repeat; position: relative; margin: 0 auto; background-position: center center; background-size: cover;
       h1{background: url(asset-path('big-giw.png')) no-repeat; width: 330px; height: 212px; top: 85px; position: relative;}
     }
     p{top: 125px; position: relative; text-align: center; font-size: 24px; color: white; font-weight: 100; max-width: 470px; width: 100%;}
   }
+}
+
+.profile{
+  .main{width: 100%; height: ; background: $blue;}
 }
 
 
