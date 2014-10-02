@@ -130,8 +130,11 @@ header{
   }
 }
 
-.profile{
-  .main{width: 100%; height: ; background: $blue;}
+.profiles{
+  .main{width: 100%; height: 207px; background: $blue;
+    .img{width: 100%; height: 207px; background: url(asset-path('bg-top-small.png')) repeat-x;}
+    p{display: none;}
+  }
 }
 
 
