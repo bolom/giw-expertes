@@ -3,11 +3,77 @@
   %h2 Quelques expertes du réseau
   
   %div.wrapper
-    - @random_profiles.each do |profile|
-      %div
-        %h3
-          = link_to(profile) do
-            = profile.firstname
-            = profile.lastname
+    %ul.profilist
+      %li.profilistitem
+        %a{ href: '#', title: 'Jean-Pierre' }
+          %span.avatar
+            = image_tag("http://www.onemorethingstudio.com/fr/wp-content/uploads/sites/2/2013/03/jeremie.jpg", :alt => "rss feed")
+          %h3
+            %span.firstname.blue Prénom
+            %span.name.blue Nom
+          %span.line
+          %ul
+            %li
+              %a.tag{ href: 'tag2', title: 'compétence 1' } compétence 1
+            %li
+              %a.tag{ href: 'tag3', title: 'compétence 2' } compétence 2
+            %li
+              %a.tag{ href: 'tag4', title: 'compétence 3' } compétence 3
+      %li.profilistitem
+        %a{ href: '#', title: 'Jean-Pierre' }
+          %span.avatar
+            = image_tag("http://www.onemorethingstudio.com/fr/wp-content/uploads/sites/2/2013/03/jeremie.jpg", :alt => "rss feed")
+          %h3
+            %span.firstname.blue Prénom
+            %span.name.blue Nom
+          %span.line
+          %ul
+            %li
+              %a.tag{ href: 'tag2', title: 'compétence 1' } compétence 1
+            %li
+              %a.tag{ href: 'tag3', title: 'compétence 2' } compétence 2
+            %li
+              %a.tag{ href: 'tag4', title: 'compétence 3' } compétence 3
+      %li.profilistitem
+        %a{ href: '#', title: 'Jean-Pierre' }
+          %span.avatar
+            = image_tag("http://www.onemorethingstudio.com/fr/wp-content/uploads/sites/2/2013/03/jeremie.jpg", :alt => "rss feed")
+          %h3
+            %span.firstname.blue Prénom
+            %span.name.blue Nom
+          %span.line
+          %ul
+            %li
+              %a.tag{ href: 'tag2', title: 'compétence 1' } compétence 1
+            %li
+              %a.tag{ href: 'tag3', title: 'compétence 2' } compétence 2
+            %li
+              %a.tag{ href: 'tag4', title: 'compétence 3' } compétence 3
+      %li.profilistitem
+        %a{ href: '#', title: 'Jean-Pierre' }
+          %span.avatar
+            = image_tag("http://www.onemorethingstudio.com/fr/wp-content/uploads/sites/2/2013/03/jeremie.jpg", :alt => "rss feed")
+          %h3
+            %span.firstname.blue Prénom
+            %span.name.blue Nom
+          %span.line
+          %ul
+            %li
+              %a.tag{ href: 'tag2', title: 'compétence 1' } compétence 1
+            %li
+              %a.tag{ href: 'tag3', title: 'compétence 2' } compétence 2
+            %li
+              %a.tag{ href: 'tag4', title: 'compétence 3' } compétence 3
+  %span.bgline
   
-        .linked_in_url= link_to profile.linked_in_url
+  
+  
+  
+/    - @random_profiles.each do |profile|
+/      %div
+/        %h3
+/          = link_to(profile) do
+/            = profile.firstname
+/            = profile.lastname
+  
+/        .linked_in_url= link_to profile.linked_in_url

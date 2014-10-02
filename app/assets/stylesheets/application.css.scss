@@ -36,18 +36,24 @@ $pink: #ff3654;
 $yellow: #ffc508;
 $greystrong: #444444;
 
+a,button,input,div,span,p{
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
 
 @font-face {
-    font-family: 'Hoefler';
-    src: url(font-path('hoefler_text_black-webfont.eot'));
-    src: url(font-path('hoefler_text_black-webfont.eot?#iefix')) format('embedded-opentype'),
-         url(font-path('hoefler_text_black-webfont.woff2')) format('woff2'),
-         url(font-path('hoefler_text_black-webfont.woff')) format('woff'),
-         url(font-path('hoefler_text_black-webfont.ttf')) format('truetype'),
-         url(font-path('hoefler_text_black-webfont.svg#hoefler_text_blackregular')) format('svg');
-    font-weight: 700;
-    font-style: bold;
-
+  font-family: 'Hoefler';
+  src: url(font-path('hoefler_text_black-webfont.eot'));
+  src: url(font-path('hoefler_text_black-webfont.eot?#iefix')) format('embedded-opentype'),
+       url(font-path('hoefler_text_black-webfont.woff2')) format('woff2'),
+       url(font-path('hoefler_text_black-webfont.woff')) format('woff'),
+       url(font-path('hoefler_text_black-webfont.ttf')) format('truetype'),
+       url(font-path('hoefler_text_black-webfont.svg#hoefler_text_blackregular')) format('svg');
+  font-weight: 700;
+  font-style: bold;
 }
 
 
@@ -78,6 +84,9 @@ section{padding: 50px 0; text-align: center;
 *::-moz-placeholder{color: $bluestrong;}
 *:-ms-input-placeholder{color: $bluestrong;}
 
+::selection{background: rgba(0,0,0,0.6); color: white;}
+::-moz-selection{background: rgba(0,0,0,0.6); color: white;}
+
 /*
 ---------------------------------- 
   NAVIGATION
@@ -89,6 +98,7 @@ section{padding: 50px 0; text-align: center;
     ul{float: right;}
     li{display: inline-block;
       a{color: white; text-decoration: none; line-height: 40px;}
+      a:hover{text-decoration: underline;}
       a:after{content:" - "; display: inline-block; margin: 0 5px 0 10px; line-height: 40px; position: relative;}
     }
     li:last-child{
@@ -170,11 +180,60 @@ footer{text-align: center;
   .btn-default:hover{background: white; box-shadow: 0px 0px 10px white;}
 }
 
+
+
+
+/*
+---------------------------------- 
+  PROFIL LIST ITEMS
+----------------------------------
+*/
+
+.profilist, .profilistitem{list-style: none; padding: 0; margin: 0; position: relative; z-index: 1;}
+.profilist{width: 100%; text-align: center;
+  a:hover{text-decoration: none;}
+}
+.profilistitem{display: inline-block; width: 200px; text-align: center; margin: 0 15px; list-style: none; padding: 0;
+  .avatar{border-radius: 100%; border: 12px solid #CBCBCB; width: 200px; height: 200px; position: relative; display: block; margin: 0; padding: 0;
+    img{width: 100%; height: 100%; position: relative; border-radius: 100%;}
+  }
+  .avatar:before{position: absolute; top: -12px; left: -12px; display: block; z-index: 0; width: 200px; height: 200px; border: 1px solid #cbc; content: "."; text-indent: -9999px; border-radius: 100%;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: -webkit-transform;
+    transition-property: transform;
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+  .avatar:hover{border-color: $pink;}
+  .avatar:hover:before{
+    -webkit-transform: translate(-10px,-10px);
+    -webkit-transform: scale(1.1,1.1);
+    -ms-transform: translateY(-5px);
+    transform: translateY(-5px);
+  }
+  .firstname, .lastname{display: block;}
+  .firstname{font-weight: 700;}
+  .line{display: block; margin: 20px auto; height: 1px; width: 70px; background: $greystrong;}
+  ul,li{padding: 0; margin: 0; list-style: none;}
+  li{
+    a{color: $greystrong; font-size: 18px;}
+    a:hover{text-decoration: underline;}
+  }
+}
+
+
+
 /*
 ---------------------------------- 
   SECTIONS
 ----------------------------------
 */
+
+#expertesrandom{position: relative;
+    .bgline{width: 100%; height: 1px; background: #cbc; position: absolute; display: block; top: 235px; z-index: 0;}
+}
 
 #submit{color: white; background: $pink;
   h2{color: white;}
