@@ -43,6 +43,13 @@ a,button,input,div,span,p{
   -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
+.filter-option{
+  -webkit-transition: none;
+  -moz-transition: none;
+  -ms-transition: none;
+  -o-transition: none;
+  transition: none;
+}
 
 @font-face {
   font-family: 'Hoefler';
@@ -71,9 +78,16 @@ a,button,input,div,span,p{
 .button{text-decoration: none; padding: 0 20px; line-height: 54px; height: 56px; position: relative; text-align: center; font-size: 26px; width: auto; font-weight: 700; display: inline-block; margin: 50px 0 0 0;}
 .button:hover{top: -5px; text-decoration: none;}
 
+.box{box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -o-box-sizing: border-box;}
+
 .tmp{font-size: 12px; width: 200px; margin: 0 auto; text-align: center;}
 
-body{font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; font-weight: 300;}
+.clearfix:after{content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0;}
+.clearfix{display: inline-block;}
+html[xmlns] .clearfix{display: block;}
+* html .clearfix{height: 1%;}
+
+body{font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; font-weight: 300; -webkit-transform:translate3d(0,0,0);}
 
 h2{font-family: "Hoefler"; color: $blue; font-size: 48px; text-align: center;}
 
@@ -132,7 +146,9 @@ header{
 
 .profiles{
   .main{width: 100%; height: 207px; background: $blue;
-    .img{width: 100%; height: 207px; background: url(asset-path('bg-top-small.png')) repeat-x;}
+    .img{width: 100%; height: 207px; background: url(asset-path('bg-top-small.png')) repeat-x;
+      h1{background: url(asset-path('GIW-expert-small.png')) no-repeat; width: 168px; height: 100px; top: 15px; position: relative;}
+    }
     p{display: none;}
   }
 }
@@ -169,13 +185,14 @@ footer{text-align: center;
 
 
 .home #searchform{top: 220px;}
+.profiles #searchform{top: 30px;}
 
 #byexpertise{height: 0; width: 0; position: absolute;}
 
 #searchform{position: relative; font-weight: 100;
-  input{font-size: 26px; border: none; height: 56px; color: $bluestrong; line-height: 52px; padding: 0 20px; display: inline-block; appearance: none; outline: none;}
+  input{font-size: 26px; border: none; height: 56px; color: $bluestrong; line-height: 52px; padding: 0 20px; display: inline-block; appearance: none; outline: none; -webkit-backface-visibility: hidden;}
   input:focus{box-shadow: inset 0px 0px 5px $pink;}
-  input[type=submit]{background: $pink; border: 1px solid white; border-radius: 0; color: white; padding: 0 20px 0 60px; position: relative; z-index: 1; text-shadow: 0;}
+  input[type=submit]{background: $pink; border: 1px solid white; border-radius: 0; color: white; padding: 0 20px 0 60px; position: relative; z-index: 1; text-shadow: 0; -webkit-backface-visibility: hidden;}
   input[type=submit]:hover{box-shadow: 0px 0px 10px white;}
   .or{color: white; font-size: 24px;margin: 0 10px; display: inline-block; position: relative;}
   .form-group{display: inline-block;}
@@ -189,6 +206,7 @@ footer{text-align: center;
   .btn-group.open .dropdown-toggle{box-shadow: inset 0px 0px 5px $pink; outline: none !important; -webkit-appearance: none;}
   .bootstrap-select .btn:focus{outline: none; -webkit-appearance: none;}
   .btn-default:hover{background: white; box-shadow: 0px 0px 10px white;}
+  .filter-option{font-size: 26px;}
 }
 
 
@@ -233,6 +251,65 @@ footer{text-align: center;
     a:hover{text-decoration: underline;}
   }
 }
+
+
+/*
+---------------------------------- 
+  SINGLE PROFIL
+----------------------------------
+*/
+
+#theprofile{
+  .left{position: relative; float: left; width: 220px;
+    .avatar{border-radius: 100%; border: 12px solid #CBCBCB; width: 200px; height: 200px; position: relative; display: block; margin: 0; padding: 0;
+      img{width: 100%; height: 100%; position: relative; border-radius: 100%;}
+    }
+    .avatar:before{position: absolute; top: -12px; left: -12px; display: block; z-index: 0; width: 200px; height: 200px; border: 1px solid #cbc; content: "."; text-indent: -9999px; border-radius: 100%;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: -webkit-transform;
+    transition-property: transform;
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+    }
+    .avatar:hover{border-color: $pink;}
+    .avatar:hover:before{
+    -webkit-transform: translate(-10px,-10px);
+    -webkit-transform: scale(1.1,1.1);
+    -ms-transform: translateY(-5px);
+    transform: translateY(-5px);
+    -webkit-backface-visibility: hidden;
+    }
+  } /* end left */
+  .right{float: left; position: relative; width: 740px; -webkit-backface-visibility: hidden; text-align: left; padding: 0 0 0 50px;
+    .firstname, .name{font-size: 34px;}
+    .firstname{font-weight: 700;}
+    h4{font-size: 18px; font-weight: 700; color: $pink;}
+    .expert, li{list-style: none; padding: 0; margin: 0;}
+    .expert{width: 100%; margin: 20px 0 0 0; position: relative;
+      li{display: inline-block; font-size: 18px; background: $pink; color: white; height: 35px;
+        a{color: white; padding: 0 15px; line-height: 35px;}
+      }
+    }
+    .contact{width: 100%; position: relative; margin: 20px 0 0 0;
+      .btcontact{float: left; position: relative; padding: 0 25px; height: 56px; line-height: 56px; color: white; background: $blue; font-size: 18px; font-weight: 700; margin: 0;}
+      .btcontact:hover{box-shadow: 0px 5px 0px #7ECFE5;}
+      .social{margin: 0 0 0 30px; position: relative; float: left; padding: 0; font-size: 0; line-height: 56px;
+        a{display: inline-block; margin: 0 10px; text-indent: -9999px; width: 53px; height: 53px; position: relative;}
+        a:hover{top: -5px;}
+        .facebook{background: url(asset-path('facebook-blue.png')) no-repeat;}
+        .twitter{background: url(asset-path('twitter-blue.png')) no-repeat;}
+        .googleplus{background: url(asset-path('google-plus-blue.png')) no-repeat;}
+        .linkedin{background: url(asset-path('linkedin-blue.png')) no-repeat;}
+      }
+    }
+  }/* end right */
+  
+}
+
+
+
 
 
 
