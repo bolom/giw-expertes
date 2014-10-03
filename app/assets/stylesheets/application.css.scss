@@ -147,7 +147,7 @@ header{
 .profiles{
   .main{width: 100%; height: 207px; background: $blue;
     .img{width: 100%; height: 207px; background: url(asset-path('bg-top-small.png')) repeat-x;
-      h1{background: url(asset-path('GIW-expert-small.png')) no-repeat; width: 168px; height: 100px; top: 15px; position: relative;}
+      h1 a{background: url(asset-path('GIW-expert-small.png')) no-repeat; width: 168px; height: 100px; top: 15px; position: relative; display: block; margin: 0 auto;}
     }
     p{display: none;}
   }
