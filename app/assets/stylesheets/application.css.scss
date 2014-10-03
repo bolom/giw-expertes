@@ -15,7 +15,7 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "bootstrap-select";
-
+@import "flexslider";
 
 
 // Place all the styles related to the profiles controller here.
@@ -62,7 +62,6 @@ a,button,input,div,span,p{
   font-weight: 700;
   font-style: bold;
 }
-
 
 /*
 ---------------------------------- 
@@ -144,10 +143,10 @@ header{
   }
 }
 
-.profiles{
+.profiles, .sponsors{
   .main{width: 100%; height: 207px; background: $blue;
     .img{width: 100%; height: 207px; background: url(asset-path('bg-top-small.png')) repeat-x;
-      h1 a{background: url(asset-path('GIW-expert-small.png')) no-repeat; width: 168px; height: 100px; top: 15px; position: relative; display: block; margin: 0 auto;}
+      h1 a{background: url(asset-path('GIW-expert-small.png')) no-repeat; width: 168px; height: 100px; top: 20px; position: relative; display: block; margin: 0 auto;}
     }
     p{display: none;}
   }
@@ -185,7 +184,8 @@ footer{text-align: center;
 
 
 .home #searchform{top: 220px;}
-.profiles #searchform{top: 30px;}
+.profiles #searchform,
+.sponsors #searchform{top: 40px;}
 
 #byexpertise{height: 0; width: 0; position: absolute;}
 
@@ -308,10 +308,33 @@ footer{text-align: center;
   
 }
 
+/*
+---------------------------------- 
+  PARTERS
+----------------------------------
+*/
 
+#parnersOne{background: $blue; border-bottom: 1px solid white;}
+#parnersTwo{background: #24afd6; border-bottom: 1px solid white;}
+#parnersThree{background: #469ab3; border-bottom: 1px solid white;}
+#parnersFour{background: #628a96; border-bottom: 1px solid white;}
+#parnersFive{background: #797c7d;}
 
-
-
+.partnerslide{padding: 50px 0; vertical-align: middle; position: relative; height: 300px;
+  .slides{height: 200px; text-align: center; z-index: 1;}
+  li{width: 200px; height: 200px; vertical-align: middle; position: relative; text-align: center; padding: 0 10px; box-sizing: border-box;
+    a{width: 200px; height: 200px; position: relative; line-height: 200px;
+      img{width: 100%; height: auto;}
+    }
+  }
+  .flex-direction-nav{position: absolute; top: 145px; width: 100%;
+    li{height: 52px; position: relative; display: block; float: left; width: 50%; margin: 0; padding: 0;
+      a{text-indent: -9999px; display: block; width: 26px; height: 52px; z-index: 2; top: 0; opacity: 1;}
+      .flex-prev{background: url(asset-path('nav-left.png')) no-repeat; float: left; content: ""; left: -40px;}
+      .flex-next{background: url(asset-path('nav-right.png')) no-repeat; float: right; content: ""; right: -40px;}
+    }
+  }
+}
 
 /*
 ---------------------------------- 
@@ -415,6 +438,135 @@ footer .giw{background: url(asset-path('GIW-small@2x.png')) no-repeat; backgroun
 } /* end mediaqueries */
 
 
+
+
+/*
+---------------------------------- 
+  LOADER
+----------------------------------
+*/
+
+
+@-webkit-keyframes circles {
+  0% {
+    -webkit-transform: rotate(-720deg);
+    -moz-transform: rotate(-720deg);
+    -ms-transform: rotate(-720deg);
+    -o-transform: rotate(-720deg);
+    transform: rotate(-720deg);
+  }
+
+  50% {
+    -webkit-transform: rotate(720deg);
+    -moz-transform: rotate(720deg);
+    -ms-transform: rotate(720deg);
+    -o-transform: rotate(720deg);
+    transform: rotate(720deg);
+  }
+}
+
+@-moz-keyframes circles {
+  0% {
+    -webkit-transform: rotate(-720deg);
+    -moz-transform: rotate(-720deg);
+    -ms-transform: rotate(-720deg);
+    -o-transform: rotate(-720deg);
+    transform: rotate(-720deg);
+  }
+
+  50% {
+    -webkit-transform: rotate(720deg);
+    -moz-transform: rotate(720deg);
+    -ms-transform: rotate(720deg);
+    -o-transform: rotate(720deg);
+    transform: rotate(720deg);
+  }
+}
+
+@-o-keyframes circles {
+  0% {
+    -webkit-transform: rotate(-720deg);
+    -moz-transform: rotate(-720deg);
+    -ms-transform: rotate(-720deg);
+    -o-transform: rotate(-720deg);
+    transform: rotate(-720deg);
+  }
+
+  50% {
+    -webkit-transform: rotate(720deg);
+    -moz-transform: rotate(720deg);
+    -ms-transform: rotate(720deg);
+    -o-transform: rotate(720deg);
+    transform: rotate(720deg);
+  }
+}
+
+@keyframes circles {
+  0% {
+    -webkit-transform: rotate(-720deg);
+    -moz-transform: rotate(-720deg);
+    -ms-transform: rotate(-720deg);
+    -o-transform: rotate(-720deg);
+    transform: rotate(-720deg);
+  }
+
+  50% {
+    -webkit-transform: rotate(720deg);
+    -moz-transform: rotate(720deg);
+    -ms-transform: rotate(720deg);
+    -o-transform: rotate(720deg);
+    transform: rotate(720deg);
+  }
+}
+
+/* Styles for old versions of IE */
+.circles {
+  font-family: sans-serif;
+  font-weight: 100;
+}
+
+/* :not(:required) hides this rule from IE9 and below */
+.circles:not(:required) {
+  position: relative;
+  text-indent: -9999px;
+  display: block;
+  margin: 0 auto;
+  top: 70px;
+  width: 25px;
+  height: 25px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 100%;
+  -webkit-animation: circles 3s infinite ease-in-out;
+  -moz-animation: circles 3s infinite ease-in-out;
+  -ms-animation: circles 3s infinite ease-in-out;
+  -o-animation: circles 3s infinite ease-in-out;
+  animation: circles 3s infinite ease-in-out;
+  -webkit-transform-origin: 50% 100%;
+  -moz-transform-origin: 50% 100%;
+  -ms-transform-origin: 50% 100%;
+  -o-transform-origin: 50% 100%;
+  transform-origin: 50% 100%;
+}
+.circles:not(:required)::before {
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 100%;
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: 18.75px;
+  left: -10.82532px;
+}
+.circles:not(:required)::after {
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 100%;
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: 18.75px;
+  left: 10.82532px;
+}
 
 
 

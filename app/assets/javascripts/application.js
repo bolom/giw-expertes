@@ -14,4 +14,26 @@
 //= require jquery_ujs
 //= require bootstrap-sprockets
 //= require bootstrap-select
+//= require jquery.flexslider-min
+
+
+
+
+
+/* Sponsor Page */
+$(window).load(function(){
+  $('.partnerslide').flexslider({
+    animation: "slide",
+    animationLoop: true,
+    controlNav: false,
+    directionNav: true,
+    pauseOnAction: false,
+    pauseOnHover: true,
+    itemWidth: 210,
+    itemMargin: 20,
+    start: function(slider){
+      $('.loader').removeClass('circles');
+    }
+  });
+});
 
