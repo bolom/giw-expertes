@@ -2,7 +2,29 @@
 
   %h2 Ils nous soutiennent
   
-  %div.wrapper
-    %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-    = link_to "voir tous les mécènes", sponsors_path, :class => "button"
+  %div.wrapper.partnerslide
+    %span.loader.circles
+    %ul.slides
+      %li
+        %a{ href: '#', title: 'Title' }
+          = image_tag("http://preview.omts.fr/hosting/omts-white@2x.png", :alt => "OneMoreThing studio")
+      %li
+        %a{ href: '#', title: 'Title' }
+          = image_tag("http://www.audiovideohd.fr/i/imgs/6297-4.jpg", :alt => "Fnac")
+      %li
+        %a{ href: '#', title: 'Title' }
+          = image_tag("http://preview.omts.fr/hosting/omts-white@2x.png", :alt => "OneMoreThing studio")
+      %li
+        %a{ href: '#', title: 'Title' }
+          = image_tag("http://preview.omts.fr/hosting/omts-white@2x.png", :alt => "OneMoreThing studio")
+      %li
+        %a{ href: '#', title: 'Title' }
+          = image_tag("http://preview.omts.fr/hosting/omts-white@2x.png", :alt => "OneMoreThing studio")
+      %li
+        %a{ href: '#', title: 'Title' }
+          = image_tag("http://preview.omts.fr/hosting/omts-white@2x.png", :alt => "OneMoreThing studio")
+      %li
+        %a{ href: '#', title: 'Title' }
+          = image_tag("http://preview.omts.fr/hosting/omts-white@2x.png", :alt => "OneMoreThing studio")
+  
+      = link_to "voir tous les mécènes", sponsors_path, :class => "button"
