@@ -15,6 +15,7 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "bootstrap-select";
+@import "jasny-bootstrap.min";
 @import "flexslider";
 
 
@@ -207,6 +208,10 @@ footer{text-align: center;
   .bootstrap-select .btn:focus{outline: none; -webkit-appearance: none;}
   .btn-default:hover{background: white; box-shadow: 0px 0px 10px white;}
   .filter-option{font-size: 26px;}
+  .bs-searchbox{
+    input{background: #e8faff; height: 26px; font-size: 16px; border-radius: 0; box-shadow: none;}
+    input:focus{box-shadow: none;}
+  }
 }
 
 
@@ -273,21 +278,35 @@ footer{text-align: center;
       img{width: 100%; height: 100%; position: relative; border-radius: 100%;}
     }
     .avatar:before{position: absolute; top: -12px; left: -12px; display: block; z-index: 0; width: 200px; height: 200px; border: 1px solid #cbc; content: "."; text-indent: -9999px; border-radius: 100%;
-    -webkit-transition-duration: 0.3s;
-    transition-duration: 0.3s;
-    -webkit-transition-property: -webkit-transform;
-    transition-property: transform;
-    -webkit-transform: translateZ(0);
-    -ms-transform: translateZ(0);
-    transform: translateZ(0);
+      -webkit-transition-duration: 0.3s;
+      -moz-transition-duration: 0.3s;
+      -ms-transition-duration: 0.3s;
+      -o-transition-duration: 0.3s;
+      transition-duration: 0.3s;
+      -webkit-transition-property: -webkit-transform;
+      -moz-transition-property: -moz-transform;
+      -ms-transition-property: -ms-transform;
+      -o-transition-property: -o-transform;
+      transition-property: transform;
+      -webkit-transform: translateZ(0);
+      -moz-transform: translateZ(0);
+      -ms-transform: translateZ(0);
+      -o-transform: translateZ(0);
+      transform: translateZ(0);
     }
     .avatar:hover{border-color: $pink;}
     .avatar:hover:before{
-    -webkit-transform: translate(-10px,-10px);
-    -webkit-transform: scale(1.1,1.1);
-    -ms-transform: translateY(-5px);
-    transform: translateY(-5px);
-    -webkit-backface-visibility: hidden;
+      -webkit-transform: translate(-10px,-10px);
+      -webkit-transform: scale(1.1,1.1);
+      -moz-transform: translate(-10px,-10px);
+      -moz-transform: scale(1.1,1.1);
+      -ms-transform: translate(-10px,-10px);
+      -ms-transform: scale(1.1,1.1);
+      -o-transform: translate(-10px,-10px);
+      -o-transform: scale(1.1,1.1);
+      transform: translate(-10px,-10px);
+      transform: scale(1.1,1.1);
+      -webkit-backface-visibility: hidden;
     }
   } /* end left */
   .right{float: left; position: relative; width: 740px; -webkit-backface-visibility: hidden; text-align: left; padding: 0 0 0 50px;
@@ -315,6 +334,66 @@ footer{text-align: center;
   }/* end right */
   
 }
+
+/*
+---------------------------------- 
+  SUBMIT PROFILE
+----------------------------------
+*/
+
+#profilesSubmit{text-align: left;
+  h3{font-family: "Hoefler"; color: $pink; font-size: 30px; text-align: left; border-bottom: 1px solid #ccc; margin: 50px 0 30px 0; position: relative; display: block; width: 100%;}
+  h4{border-bottom: 1px solid #ccc; margin: 20px 0 10px 0; width: 100%; font-weight: 700;}
+  p{font-size: 16px; margin: 10px 0;}
+  input[type=text], input[type=email]{height: 42px; line-height: 42px; background: #e8faff; border: none; padding: 0 10px; outline: none; appearance: none; -webkit-appearance: none;}
+  input[type=text]:focus, input[type=email]:focus{box-shadow: inset 0px 0px 5px $pink;}
+  input[type=text].error, input[type=email].error{background: $pink; color: white;}
+  
+  input[type=text].error::-webkit-input-placeholder,
+  input[type=text].error:-moz-placeholder,
+  input[type=text].error::-moz-placeholder,
+  input[type=text].error:-ms-input-placeholder,
+  input[type=email].error::-webkit-input-placeholder,
+  input[type=email].error:-moz-placeholder,
+  input[type=email].error::-moz-placeholder,
+  input[type=email].error:-ms-input-placeholder{color: white;}
+  
+  .subsections{width: 100%;
+    .left{position: relative; float: left; width: 200px; margin: 0 0 0 50px;
+      label{margin: 0 20px 0 5px; position: relative;}
+    }
+    .right{position: relative; float: left; width: 600px; text-align: left;
+      .glyphicon{color: $blue;}
+      input{margin: 0 0 10px 20px; position: relative; width: 500px; display: inline-block;}
+    }
+  }
+  .firstname, .lastname{width: 400px; font-size: 24px;}
+  .avatar{width: 200px; height: 200px; background: #ebebeb; border: 1px solid #ccc; padding: 10px; position: relative;}
+  .avatarUpload{float: left; position: relative; width: 300px;}
+  .social{float: left; position: relative; width: 600px; margin: 0 0 0 50px;
+    .link{margin: 0 0 10px 0; position: relative;
+      input{width: 400px;}
+    }
+    .glyphicon{position: relative; display: inline-block; padding: 0 0 0 5px; color: $blue; margin: 0 10px 20px 0;}
+    .picto{width: 150px; position: relative; display: inline-block;}
+    .picto:before{width: 24px; height: 24px; display: inline-block; position: relative; margin: 0 10px 0 0; content: "."; vertical-align: middle; text-indent: -9999px;}
+    .linkedin .picto:before{background: url(asset-path('linkedin-small.png')) no-repeat;}
+    .twitter .picto:before{background: url(asset-path('twitter-small.png')) no-repeat;}
+    .facebook .picto:before{background: url(asset-path('facebook-small.png')) no-repeat;}
+    .googleplus .picto:before{background: url(asset-path('google-plus-small.png')) no-repeat;}
+    .email .picto{width: 117px;}
+    .email .picto:before{content: ""; display: none;}
+  }
+  .tags{
+    .domain{position: relative; margin: 0 0 20px 0;}
+  }
+  .button{margin: 50px auto 0 auto; background: $pink; color: white; border: 0; display: block;}
+  .button:hover{box-shadow: 0px 5px 0px #C5233B;}
+}
+
+
+
+
 
 /*
 ---------------------------------- 
@@ -439,6 +518,12 @@ footer .giw{background: url(asset-path('GIW-small@2x.png')) no-repeat; backgroun
   .twitter{background: url(asset-path('twitter@2x.png')) no-repeat; background-size: contain;}
   .google{background: url(asset-path('google-plus@2x.png')) no-repeat; background-size: contain;}
   .linkedin{background: url(asset-path('linkedin@2x.png')) no-repeat; background-size: contain;}
+}
+#profilesSubmit .social{ 
+  .linkedin .picto:before{background: url(asset-path('linkedin-small@2x.png')) no-repeat; background-size: contain;}
+  .twitter .picto:before{background: url(asset-path('twitter-small@2x.png')) no-repeat; background-size: contain;}
+  .facebook .picto:before{background: url(asset-path('facebook-small@2x.png')) no-repeat; background-size: contain;}
+  .googleplus .picto:before{background: url(asset-path('google-plus-small@2x.png')) no-repeat; background-size: contain;}
 }
 
 
