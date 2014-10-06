@@ -1,11 +1,42 @@
-%h1 Les expertes
+%section#profilesList
 
-%section.test
-  - @profiles.each do |profile|
-    %div
-      %h2
-        = link_to(profile) do
-          = profile.firstname
-          = profile.lastname
+  %h2
+    %span.small votre recherche :
+    %span Experte en ecommerce
+    %span Digital 360°
+    %span Développeur Ruby
 
-      .linked_in_url= link_to profile.linked_in_url
+  %div.wrapper
+    %ul.profilist
+      - @profiles.each do |profile|
+        %li.profilistitem
+          = link_to(profile) do
+            %span.avatar
+              = image_tag("http://www.onemorethingstudio.com/fr/wp-content/uploads/sites/2/2013/03/jeremie.jpg", :alt => "rss feed")
+            %h3
+              %span.firstname.blue= profile.firstname
+              %span.name.blue= profile.lastname
+            %span.line
+            %ul
+              %li
+                %a.tag{ href: 'tag2', title: 'compétence 1' } compétence 1
+              %li
+                %a.tag{ href: 'tag3', title: 'compétence 2' } compétence 2
+              %li
+                %a.tag{ href: 'tag4', title: 'compétence 3' } compétence 3
+    %ul.pagination
+      %li
+        %a{ href: '#' } &laquo;
+      %li
+        %a{ href: '#' } 1
+      %li
+        %a{ href: '#' } 2
+      %li
+        %a{ href: '#' } 3
+      %li
+        %a{ href: '#' } 4  
+      %li
+        %a{ href: '#' } &raquo;  
+    
+                      
+    
