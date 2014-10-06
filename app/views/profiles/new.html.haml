@@ -139,6 +139,25 @@
               
                 - domain.skills.each do |skill|
                   %option{ value: skill.id }= skill.label
+                    
+      %div.subsections.complement.clearfix
+        %h3 Informations complémentaires
+        %p
+          Proposez-vous le profil d'une autre personne ?
+          /'
+          %span.pink * obligatoire       
+        
+        %div.left
+          %input{ name: 'complement', value: 'complement-oui', id: 'complement-oui', type: 'radio' }
+          %label{ for: 'complement-oui' } Oui
+          %input{ name: 'complement', value: 'complement-non', id: 'complement-non', type: 'radio' }
+          %label{ for: 'complement-non' } Non
+        %div.right
+          %div.input-group
+            %span.glyphicon.glyphicon-link
+            %input{ type: 'text', name: 'link-complement-first', value: '', placeholder: 'merci de nous indiquer votre email pour référence' } 
+        
+        
             
       %input{ name: 'submit', value: 'soumettez une experte', type: 'submit', class: 'button'}            
             
