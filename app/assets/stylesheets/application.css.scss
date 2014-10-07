@@ -492,7 +492,7 @@ footer{text-align: center;
 
 #mobilenav{display: none;}
 
-.slicknav_menu{background: rgba(255,255,255,0.2); display: none; width: 100%; border-bottom: 1px solid white; padding: 0; position: fixed; -webkit-transform:translateZ(1px); -moz-transform:translateZ(1px); -o-transform:translateZ(1px); transform:translateZ(1px);
+.slicknav_menu{background: rgba(255,255,255,0.2); display: none; width: 100%; border-bottom: 1px solid white; padding: 0; position: fixed; z-index: 10000;
   .slicknav_menutxt{font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; font-weight: 300; text-shadow: none; color: $greystrong;}
   .slicknav_btn{background: none;}
   .slicknav_icon-bar{background-color: $greystrong; box-shadow: none;}
@@ -520,7 +520,7 @@ footer{text-align: center;
 
 
 @media screen and (max-width: 40em){
-  .slicknav_menu{display: block;}
+  .slicknav_menu{display: inline-block;}
   #topnav{display: none;}
   header{
     .main{top: -20px; position: relative; z-index: 0;}

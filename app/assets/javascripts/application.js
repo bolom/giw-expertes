@@ -46,4 +46,18 @@ $(function(){
     label: 'menu',
     closeOnClick:	true
   });
+  var $windowTag = $(window);
+  var $fixedElement = $(".slicknav_menu");
+  var fixedElementOffSet = $fixedElement.offset().top;
+
+  $windowTag.scroll(function() {
+
+    var scrollTop = $windowTag.scrollTop();
+
+    if (fixedElementOffSet < scrollTop) {
+        $fixedElement.css('top', scrollTop);
+    } else {
+        $fixedElement.css('top', 0);
+    }
+  });
 });
