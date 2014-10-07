@@ -491,8 +491,9 @@ footer{text-align: center;
 */
 
 #mobilenav{display: none;}
-.slicknav_menu{background: rgba(255,255,255,0.2); display: none; position: absolute; top: 0; left: 0; width: 100%; z-index: 1; border-bottom: 1px solid white; padding: 0;
-  .slicknav_menutxt{font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; font-weight: 300; -webkit-transform:translate3d(0,0,0); text-shadow: none; color: $greystrong;}
+
+.slicknav_menu{background: rgba(255,255,255,0.2); display: none; width: 100%; border-bottom: 1px solid white; padding: 0; position: fixed; -webkit-transform:translateZ(1px); -moz-transform:translateZ(1px); -o-transform:translateZ(1px); transform:translateZ(1px);
+  .slicknav_menutxt{font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; font-weight: 300; text-shadow: none; color: $greystrong;}
   .slicknav_btn{background: none;}
   .slicknav_icon-bar{background-color: $greystrong; box-shadow: none;}
   .slicknav_nav{background: rgba(255,255,255,0.9); color: $greystrong;
