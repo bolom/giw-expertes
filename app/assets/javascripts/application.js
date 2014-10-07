@@ -16,6 +16,7 @@
 //= require bootstrap-select
 //= require jasny-bootstrap.min
 //= require jquery.flexslider-min
+//= require jquery.slicknav.min
 
 
 
@@ -38,3 +39,11 @@ $(window).load(function(){
   });
 });
 
+
+/* Mobile Nav */
+$(function(){
+  $('#mobilenav').slicknav({
+    label: 'menu',
+    closeOnClick:	true
+  });
+});

@@ -9,8 +9,9 @@
             - domain.skills.each do |skill|
               %option{ value: skill.id }= skill.label
     
-    %span.picto
-    %input{ name: 'submit', value: 'trouver une experte', type: 'submit'}
+    %div.submit
+      %span.picto
+      %input{ name: 'submit', value: 'trouver une experte', type: 'submit'}
     
     
     

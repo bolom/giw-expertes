@@ -17,6 +17,7 @@
 @import "bootstrap-select";
 @import "jasny-bootstrap.min";
 @import "flexslider";
+@import "slicknav";
 
 
 // Place all the styles related to the profiles controller here.
@@ -102,7 +103,6 @@ section{padding: 50px 0; text-align: center;
 
 ::selection{background: rgba(0,0,0,0.6); color: white;}
 ::-moz-selection{background: rgba(0,0,0,0.6); color: white;}
-
 
 
 /*
@@ -197,7 +197,9 @@ footer{text-align: center;
   input[type=submit]:hover{box-shadow: 0px 0px 10px white;}
   .or{color: white; font-size: 24px;margin: 0 10px; display: inline-block; position: relative;}
   .form-group{display: inline-block;}
-  .picto{position: relative; top: 6px; left: 60px; background: url(asset-path('search.png')) no-repeat; width: 31px; height: 31px; content: " "; z-index: 2; display: inline-block;}
+  .submit{position: relative; display: inline-block;
+    .picto{position: relative; top: 6px; left: 55px; background: url(asset-path('search.png')) no-repeat; width: 31px; height: 31px; content: " "; z-index: 2; display: inline-block;} 
+  }
   .byname{background: url(asset-path('bg-field-transparent.png')) repeat; width: 220px;}
   .selectbox{display: inline-block; position: relative; width: 340px; height: 56px; margin: 0 !important; padding: 0 !important; top: -5px !important;}
   
@@ -373,20 +375,20 @@ footer{text-align: center;
   input[type=email].error:-ms-input-placeholder{color: white;}
   
   .subsections{width: 100%;
-    .left{position: relative; float: left; width: 200px; margin: 0 0 0 50px;
+    .left{position: relative; float: left; width: 200px; margin: 0 0 0 50px; max-width: 100%;
       label{margin: 0 20px 0 5px; position: relative;}
     }
-    .right{position: relative; float: left; width: 600px; text-align: left;
+    .right{position: relative; float: left; width: 600px; text-align: left; max-width: 100%;
       .glyphicon{color: $blue;}
       input{margin: 0 0 10px 20px; position: relative; width: 500px; display: inline-block;}
     }
   }
-  .firstname, .lastname{width: 400px; font-size: 24px;}
+  .firstname, .lastname{width: 400px; font-size: 24px; max-width: 100%; }
   .avatar{width: 200px; height: 200px; background: #ebebeb; border: 1px solid #ccc; padding: 10px; position: relative;}
   .avatarUpload{float: left; position: relative; width: 300px;}
   .social{float: left; position: relative; width: 600px; margin: 0 0 0 50px;
     .link{margin: 0 0 10px 0; position: relative;
-      input{width: 400px;}
+      input{width: 400px; max-width: 100%;}
     }
     .glyphicon{position: relative; display: inline-block; padding: 0 0 0 5px; color: $blue; margin: 0 10px 20px 0;}
     .picto{width: 150px; position: relative; display: inline-block;}
@@ -482,6 +484,32 @@ footer{text-align: center;
 }
 
 
+/*
+---------------------------------- 
+  MOBILE MENU
+----------------------------------
+*/
+
+#mobilenav{display: none;}
+.slicknav_menu{background: rgba(255,255,255,0.2); display: none; position: absolute; top: 0; left: 0; width: 100%; z-index: 1; border-bottom: 1px solid white; padding: 0;
+  .slicknav_menutxt{font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; font-weight: 300; -webkit-transform:translate3d(0,0,0); text-shadow: none; color: $greystrong;}
+  .slicknav_btn{background: none;}
+  .slicknav_icon-bar{background-color: $greystrong; box-shadow: none;}
+  .slicknav_nav{background: rgba(255,255,255,0.9); color: $greystrong;
+    ul{margin: 0;
+      li{line-height: 40px; border-bottom: 1px solid #cbcbcb;}
+      li:last-child{border-bottom: none;}
+      a{color: $greystrong;}
+      .normal{background: $blue; font-weight: 700; font-size: 20px;
+        a{color: white;}
+      }
+      .soumettre{background: $pink;}
+      .little{line-height: 30px;}
+    }
+  }
+  
+}
+
 
 /*
 ---------------------------------- 
@@ -489,8 +517,89 @@ footer{text-align: center;
 ----------------------------------
 */
 
+
+@media screen and (max-width: 40em){
+  .slicknav_menu{display: block;}
+  #topnav{display: none;}
+  header{
+    .main{top: -20px; position: relative; z-index: 0;}
+  }
+}
+
+
 /* ALL SMARTPHONES */
 @media only screen and (max-width: 415px) {
+
+.home{
+  .main{width: 100%; height: 560px; background: $blue;
+    .img{
+      h1{width: 168px; height: 100px;}
+    }
+    p{font-size: 16px; padding: 0 10px; top: 100px;}
+  }
+}
+
+.profiles, .sponsors{
+  .main{
+    .img{
+      h1 a{top: 90px;}
+    }
+    p{display: none;}
+  }
+}
+
+
+
+.home #searchform{top: 140px;}
+.profiles #searchform, .sponsors #searchform{display: none;}
+
+#searchform{top: 140px; text-align: center;
+  input, .byname{border-radius: 0; width: 340px;}
+  .or{display: block; margin: 0 0 15px 0;}
+  .selectbox{margin: 0 auto !important; display: block;}
+  .submit{display: block; margin: 15px auto; text-align: center; width: 340px; position: relative;
+    .picto{position: absolute; left: 20px; top: 10px;}
+    input{margin: 0 auto; padding: 0 20px 0 30px;}
+  }
+}
+
+#footernav{display: none;}
+section{padding: 30px 0;
+  p{padding: 0 10px;}
+}
+
+.profilist{text-align: center;}
+#expertesrandom .bgline{display: none;}
+
+#profilesSubmit{padding: 0 10px;
+  .firstname, .lastname{margin: 0 0 10px 0;}
+  .social{margin: 10px 0 0 0; width: 100%;
+    .link{margin: 0 0 10px 0; position: relative;
+      input{display: block; position: relative; margin: 10px 0 0 0; width: 310px;}
+    }
+    .glyphicon{margin: 0 10px 0 0;}
+  }
+  .subsections .right input{margin: 0 0 10px 10px; width: 310px;}
+}
+
+#theprofile{
+  .left{float: none; display: block; width: 100%;
+    .avatar{margin: 0 auto;}
+  }
+  .right{float: none; display: block; width: 100%; padding: 0 10px;
+    .expert{width: 100%;
+      li{display: block; width: auto; margin: 0 0 10px 0;}
+    }
+    .contact .btcontact{float: none; margin: 0 auto 30px auto; display: block;}
+  }
+}
+
+.partnerslide .flex-direction-nav{display: none;}
+
+
+
+
+
   
 }
 
