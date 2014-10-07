@@ -88,7 +88,7 @@ a,button,input,div,span,p{
 html[xmlns] .clearfix{display: block;}
 * html .clearfix{height: 1%;}
 
-body{font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; font-weight: 300; -webkit-transform:translate3d(0,0,0);}
+body{font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; font-weight: 300; -webkit-transform:translate3d(0,0,0); position: relative;}
 
 h2{font-family: "Hoefler"; color: $blue; font-size: 48px; text-align: center;}
 
@@ -486,11 +486,14 @@ footer{text-align: center;
 
 /*
 ---------------------------------- 
-  MOBILE MENU
+  MOBILE NAV
 ----------------------------------
 */
 
 #mobilenav{display: none;}
+
+.fixed{display: block; width: 100px; height: 20px; position: fixed; top: 300px;}
+
 
 .slicknav_menu{background: rgba(255,255,255,0.2); display: none; width: 100%; border-bottom: 1px solid white; padding: 0; position: fixed; z-index: 10000;
   .slicknav_menutxt{font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; font-weight: 300; text-shadow: none; color: $greystrong;}
@@ -512,6 +515,7 @@ footer{text-align: center;
 }
 
 
+
 /*
 ---------------------------------- 
   MEDIA QUERIES
@@ -520,7 +524,7 @@ footer{text-align: center;
 
 
 @media screen and (max-width: 40em){
-  .slicknav_menu{display: inline-block;}
+  .slicknav_menu{display: block;}
   #topnav{display: none;}
   header{
     .main{top: -20px; position: relative; z-index: 0;}
