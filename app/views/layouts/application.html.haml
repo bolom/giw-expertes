@@ -35,7 +35,7 @@
     = csrf_meta_tags
 
   %body{ class: "#{controller_name} #{action_name}" }
-    %span.fixed Position fixed
+  
     %header
       %div#topnav
         %div.wrapper
@@ -53,7 +53,7 @@
             %li
               %a{ href: 'http://girlzinweb.com/contact/', title: 'Contacts' } Contacts
             
-      %div.main
+      %div.main.webkit
         %div.img
           %h1= link_to "Les Expertes du Numérique", root_path
           %p.wrapper

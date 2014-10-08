@@ -71,6 +71,8 @@ a,button,input,div,span,p{
 ----------------------------------
 */
 
+.webkit{-webkit-backface-visibility: hidden;-webkit-transform-style: preserve-3d;}
+
 .wrapper{max-width: 960px; width: 100%; margin: 0 auto;}
 
 .blue{color: $blue;}
@@ -88,7 +90,7 @@ a,button,input,div,span,p{
 html[xmlns] .clearfix{display: block;}
 * html .clearfix{height: 1%;}
 
-body{font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; font-weight: 300; -webkit-transform:translate3d(0,0,0);}
+body{font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; font-weight: 300;}
 
 h2{font-family: "Hoefler"; color: $blue; font-size: 48px; text-align: center;}
 
@@ -488,8 +490,6 @@ footer{text-align: center;
 ----------------------------------
 */
 
-
-.modal{}
 .modal-content{border-radius: 0;
   .btn{border-radius: 0; border: 0; background: #ccc; font-weight: 700;}
   .btn-primary{background: $pink;}
