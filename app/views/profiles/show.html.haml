@@ -23,12 +23,28 @@
       .linked_in_url= link_to @profile.linked_in_url
         
       %div.contact
-        %a.btcontact.button{ href: '#', title: 'contacter par email' } contacter par email
+        /%a.btcontact.button{ href: '#', title: 'contacter par email' } contacter par email
+        %button.btn.btn-primary.btn-lg.button{ 'data-toggle'=>'modal', 'data-target'=>'#contactForm'} contacter par email
         %p.social
           %a.twitter{ href: '#', title: "Twitter" } Twitter
           %a.linkedin{ href: '#', title: "LinkedIn" } LinkedIn
           %a.facebook{ href: '#', title: "Facebook" } Facebook
           %a.googleplus{ href: '#', title: "Google Plus" } Google Plus
+
+%div#contactForm.modal.fade{ tabindex: '-1', role: 'dialog', 'aria-labelledby'=>'myModalLabel', 'aria-hidden'=>'true' }
+  %div.modal-dialog
+    %div.modal-content
+      %div.modal-header
+        %h4#contactFormTitle.modal-title Contactez-nous !
+      %div.modal-body
+        %form
+          %input{ type: 'email', value: '', name: 'email', id: 'email', placeholder: 'votre email'}
+          %input{ type: 'name', value: '', name: 'name', id: 'name', placeholder: 'votre nom' }
+          %input{ type: 'text', value: '', name: 'subject', id: 'subject', placeholder: 'sujet du message' }
+          %textarea{ placeholder: 'votre message' }
+      %div.modal-footer
+        %button.btn.btn-default{ 'data-dismiss'=>'modal' } Annuler
+        %button.btn.btn-primary Envoyer
     
 = render 'pages/suggest_profile'
     
