@@ -12,8 +12,8 @@
             %h3
               %span.firstname.blue= profile.firstname
               %span.name.blue= profile.lastname
-            %span.line
-            %ul
-              - profile.skills.each do |skill|
-                %li= link_to skill.label, '#', title: skill.label
+          %span.line
+          %ul
+            - profile.skills.limit(3).each do |skill|
+              %li= link_to skill.label, '#', title: skill.label
   %span.bgline
