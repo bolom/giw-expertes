@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141006163658) do
+ActiveRecord::Schema.define(version: 20141007153328) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -59,6 +59,29 @@ ActiveRecord::Schema.define(version: 20141006163658) do
     t.text     "linked_in_url"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "notes"
+    t.string   "email"
+    t.string   "phone"
+    t.string   "twitter_url"
+    t.string   "facebook_url"
+    t.string   "google_plus_url"
+    t.boolean  "author"
+    t.string   "author_url_1"
+    t.string   "author_url_2"
+    t.string   "author_url_3"
+    t.boolean  "speaker"
+    t.string   "speaker_url_1"
+    t.string   "speaker_url_2"
+    t.string   "speaker_url_3"
+    t.boolean  "teacher"
+    t.string   "teacher_schools"
+    t.boolean  "open_source"
+    t.string   "open_source_url_1"
+    t.string   "open_source_url_2"
+    t.string   "open_source_url_3"
+    t.boolean  "someone_else"
+    t.string   "sender_email"
+    t.text     "imported_skills"
   end
 
   create_table "profiles_skills", id: false, force: true do |t|
