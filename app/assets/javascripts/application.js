@@ -17,6 +17,7 @@
 //= require jasny-bootstrap.min
 //= require jquery.flexslider-min
 //= require jquery.slicknav.min
+//= require jquery.placeholder
 
 
 
@@ -46,7 +47,10 @@ $(function(){
     label: 'menu',
     closeOnClick: true
   });
+  $('input, textarea').placeholder();
 });
+
+/* Old browsers Placeholders */
 
 
 
