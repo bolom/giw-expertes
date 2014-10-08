@@ -17,6 +17,8 @@
 //= require jasny-bootstrap.min
 //= require jquery.flexslider-min
 //= require jquery.slicknav.min
+//= require bootstrapValidator.min
+//= require be_FR
 //= require jquery.placeholder
 
 
@@ -51,8 +53,28 @@ $(function(){
 });
 
 /* Required forms */
-
-
+$(document).ready(function() {
+    $('#addnew').bootstrapValidator({
+      container: 'tooltip',
+      feedbackIcons: {
+        valid: 'glyphicon glyphicon-ok',
+        invalid: 'glyphicon glyphicon-remove',
+        validating: 'glyphicon glyphicon-refresh'
+      },
+      fields: {
+        firstname: {
+          validators: {
+            notEmpty: {message: 'The first name is required'}
+          },
+        },  
+        lastname: {
+          validators: {
+            notEmpty: {message: 'The last name is required'}
+          }
+        }
+       }
+    });
+});
 
 
 
