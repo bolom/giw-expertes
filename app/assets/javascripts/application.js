@@ -50,7 +50,7 @@ $(function(){
   $('input, textarea').placeholder();
 });
 
-/* Old browsers Placeholders */
+/* Required forms */
 
 
 

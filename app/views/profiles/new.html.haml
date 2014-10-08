@@ -134,7 +134,7 @@
           - Domain.all.each do |domain|
             
             %div.domain
-              %select{ id: dom_id(domain), name: dom_id(domain), multiple: true, title: domain.label, class: 'form-control input-sm selectpicker'}
+              %select{ id: dom_id(domain), name: dom_id(domain), multiple: true, title: domain.label, class: 'form-control input-sm selectpicker', max: '3' }
               
                 - domain.skills.each do |skill|
                   %option{ value: skill.id }= skill.label
@@ -158,6 +158,16 @@
         
         
             
-      %input{ name: 'submit', value: 'soumettez une experte', type: 'submit', class: 'button'}            
-            
-            
+      %input{ name: 'submit', value: 'soumettez une experte', type: 'submit', class: 'button'}
+      
+
+
+
+
+
+
+
+
+
+
+       
