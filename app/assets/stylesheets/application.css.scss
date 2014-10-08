@@ -686,11 +686,19 @@ footer .giw{background: url(asset-path('GIW-small@2x.png')) no-repeat; backgroun
   .google{background: url(asset-path('google-plus@2x.png')) no-repeat; background-size: contain;}
   .linkedin{background: url(asset-path('linkedin@2x.png')) no-repeat; background-size: contain;}
 }
+
 #profilesSubmit .social{ 
   .linkedin .picto:before{background: url(asset-path('linkedin-small@2x.png')) no-repeat; background-size: contain;}
   .twitter .picto:before{background: url(asset-path('twitter-small@2x.png')) no-repeat; background-size: contain;}
   .facebook .picto:before{background: url(asset-path('facebook-small@2x.png')) no-repeat; background-size: contain;}
   .googleplus .picto:before{background: url(asset-path('google-plus-small@2x.png')) no-repeat; background-size: contain;}
+}
+
+#theprofile .right .contact .social{
+  .facebook{background: url(asset-path('facebook-blue@2x.png')) no-repeat; background-size: contain;}
+  .twitter{background: url(asset-path('twitter-blue@2x.png')) no-repeat; background-size: contain;}
+  .googleplus{background: url(asset-path('google-plus-blue@2x.png')) no-repeat; background-size: contain;}
+  .linkedin{background: url(asset-path('linkedin-blue@2x.png')) no-repeat; background-size: contain;}
 }
 
 
