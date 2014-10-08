@@ -28,7 +28,11 @@
     "Python",
     "Ruby",
     "Symfony",
-    ".NET"
+    ".NET",
+    "Langage C",
+    "CSS",
+    "Magento",
+    "Standard"
   ],
 
   "Communication, marketing et contenu" => [
@@ -49,7 +53,14 @@
     "SEO",
     "SMO",
     "Social Media",
-    "Social TV"
+    "Social TV",
+    "Livre numérique",
+    "SEA",
+    "Affiliation",
+    "Web Analytics",
+    "ROI du marketing digital",
+    "Data Analytics",
+    "Communication de crise"
   ],
 
   "Innovation, design et nouvelles technologies" => [
@@ -72,14 +83,20 @@
     "UI Design",
     "UX Design",
     "Wearable Products",
-    "Web Design"
+    "Web Design",
+    "Branding",
+    "Transformation Digitale",
+    "Semantic technologies",
+    "eBook",
+    "Accessibilité",
+    "Monnaie alternative"
   ],
 
   "Politique, business et investissement" => [
     "Business Model",
     "Crowdfunding",
     "E-Commerce",
-    "Entrepreneuriat ",
+    "Entrepreneuriat",
     "Juridique",
     "M-Commerce",
     "Mobile",
@@ -90,7 +107,11 @@
     "Venture Capitalism",
     "Web-to-Store",
     "Réglementation et législation",
-    "Politique"
+    "Politique",
+    "e-Environnement",
+    "Politique RH",
+    "e-Inclusion",
+    "Art numérique"
   ],
 
   "Technique, Administration réseau, système et base de données" => [
@@ -101,9 +122,15 @@
     "Matériel et Data Center",
     "Normalisation",
     "Routage",
-    "Sécurité",
+    "Sécurité informatique",
     "Unix",
-    "Windows"
+    "Windows",
+    "Cybercriminalité",
+    "Wordpress",
+    "Hacker",
+    "Audit",
+    "Future Networks",
+    "Réseaux sans fil"
   ]
 }.each do |domain_label, skill_labels|
   domain = Domain.create(label: domain_label)
