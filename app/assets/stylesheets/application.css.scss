@@ -366,14 +366,19 @@ footer{text-align: center;
   input[type=text]:focus, input[type=email]:focus{box-shadow: inset 0px 0px 5px $pink;}
   input[type=text].error, input[type=email].error{background: $pink; color: white;}
   
-  input[type=text].error::-webkit-input-placeholder,
-  input[type=text].error:-moz-placeholder,
-  input[type=text].error::-moz-placeholder,
-  input[type=text].error:-ms-input-placeholder,
-  input[type=email].error::-webkit-input-placeholder,
-  input[type=email].error:-moz-placeholder,
-  input[type=email].error::-moz-placeholder,
-  input[type=email].error:-ms-input-placeholder{color: white;}
+  input[type=text].error ::-webkit-input-placeholder,
+  input[type=text].error :-moz-placeholder,
+  input[type=text].error ::-moz-placeholder,
+  input[type=text].error :-ms-input-placeholder,
+  input[type=email].error ::-webkit-input-placeholder,
+  input[type=email].error :-moz-placeholder,
+  input[type=email].error ::-moz-placeholder,
+  input[type=email].error :-ms-input-placeholder{color: white;}
+  
+  input.error::-webkit-input-placeholder{color: white;}
+  input.error:-moz-placeholder{color: white;}
+  input.error::-moz-placeholder{color: white;}
+  input.error:-ms-input-placeholder{color: white;}
   
   .subsections{width: 100%;
     .left{position: relative; float: left; width: 200px; margin: 0 0 0 50px; max-width: 100%;
