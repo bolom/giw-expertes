@@ -4,16 +4,5 @@
 
   %div.wrapper
     %ul.profilist
-      - @random_profiles.each do |profile|
-        %li.profilistitem
-          = link_to(profile, title: profile.full_name) do
-            %span.avatar
-              = image_tag("http://www.onemorethingstudio.com/fr/wp-content/uploads/sites/2/2013/03/jeremie.jpg", alt: profile.full_name)
-            %h3
-              %span.firstname.blue= profile.firstname
-              %span.name.blue= profile.lastname
-          %span.line
-          %ul
-            - profile.skills.limit(3).each do |skill|
-              %li= link_to skill.label, '#', title: skill.label
+      = render partial: 'profiles/profile', collection: @random_profiles
   %span.bgline

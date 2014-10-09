@@ -1,0 +1,11 @@
+%li.profilistitem
+  = link_to(profile, title: profile.full_name) do
+    %span.avatar
+      = image_tag(profile.picture_url || 'avatar-placeholder.jpg', alt: profile.full_name)
+    %h3
+      %span.firstname.blue= profile.firstname
+      %span.name.blue= profile.lastname
+  %span.line
+  %ul
+    - profile.skills.limit(3).each do |skill|
+      %li= link_to skill.label, '#', title: skill.label

@@ -1,12 +1,16 @@
 ActiveAdmin.register Profile do
   permit_params(
+    :notes,
+    :active,
     :firstname,
     :lastname,
-    :active,
-    :linked_in_url,
-    :notes,
+    :last_position,
+    :remote_picture_url,
     :email,
     :phone,
+    :someone_else,
+    :sender_email,
+    :linked_in_url,
     :twitter_url,
     :facebook_url,
     :google_plus_url,
@@ -24,8 +28,6 @@ ActiveAdmin.register Profile do
     :open_source_url_1,
     :open_source_url_2,
     :open_source_url_3,
-    :someone_else,
-    :sender_email,
     :imported_skills,
     { skill_ids: [] }
   )
@@ -38,6 +40,7 @@ ActiveAdmin.register Profile do
     column :active
     column :firstname
     column :lastname
+    column :last_position
     column :email
     column :phone
     column :someone_else
@@ -82,6 +85,11 @@ ActiveAdmin.register Profile do
       row :active
       row :firstname
       row :lastname
+      row :last_position
+      row :picture_url
+      row :picture do
+        image_tag(profile.picture_url)
+      end
       row :email
       row :phone
       row :someone_else
@@ -117,6 +125,8 @@ ActiveAdmin.register Profile do
       f.input :active
       f.input :firstname
       f.input :lastname
+      f.input :last_position
+      f.input :remote_picture_url
       f.input :email
       f.input :phone
       f.input :someone_else

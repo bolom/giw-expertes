@@ -3,6 +3,8 @@ class Profile < ActiveRecord::Base
 
   scope :active, -> { where(active: true) }
 
+  mount_uploader :picture, PictureUploader
+
   def full_name
     "#{firstname} #{lastname}"
   end

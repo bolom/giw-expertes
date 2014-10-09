@@ -1,19 +1,15 @@
 %div.wrapper
-  %form#searchform{ method: 'POST'}
+  / %form#searchform{ method: 'POST'}
+  = form_tag(profiles_path, method: :get, id: :searchform) do
     %input{ name: 'byname', value: '', placeholder: 'prénom, nom', class: "byname"}
     %span.or ou
     %div.form-group.selectbox
-      %select{ id: 'byexpertise', name: 'byexpertise', multiple: true, title:"toutes les expertises", class: 'form-control input-sm selectpicker', 'data-live-search'=> 'true'}
+      %select{ id: 'byexpertise', name: 'byexpertise[]', multiple: true, title:"toutes les expertises", class: 'form-control input-sm selectpicker', 'data-live-search'=> 'true'}
         - Domain.all.each do |domain|
           %optgroup{ label: domain.label }
             - domain.skills.each do |skill|
               %option{ value: skill.id }= skill.label
-    
+
     %div.submit
       %span.picto
       %input{ name: 'submit', value: 'trouver une experte', type: 'submit'}
-    
-    
-    
-    
-    

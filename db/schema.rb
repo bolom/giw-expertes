@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141007153328) do
+ActiveRecord::Schema.define(version: 20141008164554) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -82,6 +82,8 @@ ActiveRecord::Schema.define(version: 20141007153328) do
     t.boolean  "someone_else"
     t.string   "sender_email"
     t.text     "imported_skills"
+    t.string   "picture"
+    t.string   "last_position"
   end
 
   create_table "profiles_skills", id: false, force: true do |t|
