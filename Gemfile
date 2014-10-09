@@ -45,6 +45,11 @@ gem 'haml'
 gem 'activeadmin', github: 'activeadmin'
 gem 'devise'
 gem 'randumb' # Active's record random ordering
+gem 'mini_magick'
+gem 'carrierwave'
+gem 'carrierwave-ftp', require: 'carrierwave/storage/ftp/all'
+gem 'kaminari'
+gem 'kaminari-bootstrap'
 
 group :development, :test do
   gem 'sqlite3'
