@@ -17,6 +17,8 @@
 //= require jasny-bootstrap.min
 //= require jquery.flexslider-min
 //= require jquery.slicknav.min
+//= require jquery.validate.min
+//= require messages_fr.min
 //= require jquery.placeholder
 
 
@@ -50,9 +52,26 @@ $(function(){
   $('input, textarea').placeholder();
 });
 
-/* Required forms */
 
-
+/* Formulaire */
+$(function(){
+  $('#addnew').validate({
+  		rules: {
+  			firstname: {
+  				required: true,
+  				minlength: 2
+  			},
+  			lastname: {
+    			required: true,
+  				minlength: 2
+  			},
+  			linkedin:{
+    			required: true,
+    			url: true
+  			}
+  		}
+  });
+});	
 
 
 

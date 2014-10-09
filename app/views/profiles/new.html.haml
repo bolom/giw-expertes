@@ -4,13 +4,13 @@
 
   %div.wrapper
     
-    %form
+    %form#addnew
 
-      %div.subsections.clearfix
+      %div.subsections.civilite.clearfix
         %h3 Civilités
         
-        %input{ name: 'firstname', value: '', placeholder: 'prénom', class: "firstname", type: 'text'}
-        %input{ name: 'lastname', value: '', placeholder: 'nom', class: "lastname", type: 'text'}
+        %input{ name: 'firstname', value: '', placeholder: 'prénom (obligatoire)', class: "firstname", type: 'text', 'data-rule-required'=>'true', 'data-msg-required'=>' ' }
+        %input{ name: 'lastname', value: '', placeholder: 'nom (obligatoire)', class: "lastname", type: 'text', 'data-rule-required'=>'true', 'data-msg-required'=>' ' }
 
       %div.subsections.clearfix
         %h3 Contact
@@ -21,17 +21,17 @@
             %span.btn.btn-default.btn-file
               %span.glyphicon.glyphicon-picture
               %span.fileinput-new Selectionnez une image
-              %input{ type: 'file', name: 'avatar'}
+              %input{ type: 'file', name: 'avatar', 'data-rule-required'=>'true', 'data-msg-required'=>''}
             %a{ href: '#', 'data-dismiss'=> 'fileinput', class: "btn btn-default fileinput-exists" } Supprimer
         
         %div.social
           %div.link.email
             %span.glyphicon.glyphicon-envelope
             %span.picto Adresse email
-            %input{ name: 'email', value: '', placeholder: 'monadress@domaine.com', type: 'email'}
+            %input{ name: 'email', value: '', placeholder: 'monadress@domaine.com', type: 'email', 'data-rule-required'=>'true', 'data-msg-required'=>' ', 'data-rule-email'=>'true'}
           %div.link.linkedin
             %span.picto LinkedIn
-            %input{ name: 'linkedin', value: '', placeholder: 'lien linkedin complet', type: 'text'}
+            %input{ name: 'linkedin', value: '', placeholder: 'lien linkedin complet', type: 'text', 'data-rule-required'=>'true', 'data-msg-required'=>' '}
           %div.link.twitter
             %span.picto Twitter
             %input{ name: 'twitter', value: '', placeholder: 'lien twitter complet', type: 'text'}
@@ -51,10 +51,11 @@
           %span.pink * obligatoire
         
         %div.left
-          %input{ name: 'publications', value: 'publications-oui', id: 'publications-oui', type: 'radio' }
+          %input{ name: 'publications', value: 'publications-oui', id: 'publications-oui', type: 'radio', 'data-rule-required'=>'true', 'data-msg-required'=>'Vous devez préciser votre réponse', required: 'true' }
           %label{ for: 'publications-oui' } Oui
-          %input{ name: 'publications', value: 'publications-non', id: 'publications-non', type: 'radio' }
+          %input{ name: 'publications', value: 'publications-non', id: 'publications-non', type: 'radio', }
           %label{ for: 'publications-non' } Non
+          %span.why-publications
         %div.right
           %div.input-group
             %span.glyphicon.glyphicon-link
@@ -72,7 +73,7 @@
           %span.pink * obligatoire
         
         %div.left
-          %input{ name: 'conference', value: 'conference-oui', id: 'conference-oui', type: 'radio' }
+          %input{ name: 'conference', value: 'conference-oui', id: 'conference-oui', type: 'radio', 'data-rule-required'=>'true', 'data-msg-required'=>'Vous devez préciser votre réponse', required: 'true' }
           %label{ for: 'conference-oui' } Oui
           %input{ name: 'conference', value: 'conference-non', id: 'conference-non', type: 'radio' }
           %label{ for: 'conference-non' } Non
@@ -93,7 +94,7 @@
           %span.pink * obligatoire
         
         %div.left
-          %input{ name: 'teach', value: 'teach-oui', id: 'teach-oui', type: 'radio' }
+          %input{ name: 'teach', value: 'teach-oui', id: 'teach-oui', type: 'radio', 'data-rule-required'=>'true', 'data-msg-required'=>'Vous devez préciser votre réponse', required: 'true' }
           %label{ for: 'teach-oui' } Oui
           %input{ name: 'teach', value: 'teach-non', id: 'teach-non', type: 'radio' }
           %label{ for: 'teach-non' } Non
@@ -108,7 +109,7 @@
           %span.pink * obligatoire
         
         %div.left
-          %input{ name: 'opensource', value: 'opensource-oui', id: 'opensource-oui', type: 'radio' }
+          %input{ name: 'opensource', value: 'opensource-oui', id: 'opensource-oui', type: 'radio', 'data-rule-required'=>'true', 'data-msg-required'=>'Vous devez préciser votre réponse', required: 'true' }
           %label{ for: 'opensource-oui' } Oui
           %input{ name: 'opensource', value: 'opensource-non', id: 'opensource-non', type: 'radio' }
           %label{ for: 'opensource-non' } Non
@@ -126,7 +127,7 @@
       %div.subsections.tags.clearfix
         %h3 Les mots clés
         %p
-          Sélectionnez les compétences clées de votre experte (3 par domaine de compétences) 
+          Sélectionnez les compétences clées de votre experte (3 compétences maximum) 
           %span.pink * obligatoire
           
         %div.form-group.selectbox
@@ -134,7 +135,7 @@
           - Domain.all.each do |domain|
             
             %div.domain
-              %select{ id: dom_id(domain), name: dom_id(domain), multiple: true, title: domain.label, class: 'form-control input-sm selectpicker', max: '3' }
+              %select{ id: dom_id(domain), name: dom_id(domain), multiple: true, title: domain.label, class: 'form-control input-sm selectpicker', value: '' }
               
                 - domain.skills.each do |skill|
                   %option{ value: skill.id }= skill.label
@@ -147,7 +148,7 @@
           %span.pink * obligatoire       
         
         %div.left
-          %input{ name: 'complement', value: 'complement-oui', id: 'complement-oui', type: 'radio' }
+          %input{ name: 'complement', value: 'complement-oui', id: 'complement-oui', type: 'radio', 'data-rule-required'=>'true', 'data-msg-required'=>'Vous devez préciser votre réponse', required: 'true' }
           %label{ for: 'complement-oui' } Oui
           %input{ name: 'complement', value: 'complement-non', id: 'complement-non', type: 'radio' }
           %label{ for: 'complement-non' } Non
@@ -159,13 +160,6 @@
         
             
       %input{ name: 'submit', value: 'soumettez une experte', type: 'submit', class: 'button'}
-      
-
-
-
-
-
-
 
 
 

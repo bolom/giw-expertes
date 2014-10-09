@@ -37,26 +37,6 @@
   %body{ class: "#{controller_name} #{action_name}" }
   
     %header
-      %nav#mobilenav.navbar.navbar-default{ role: 'navigation' }
-        %ul
-          %li.normal
-            = link_to 'Accueil',root_path
-          %li.normal.soumettre
-            = link_to 'Proposez une experte', new_profile_path
-          %li.normal.partners
-            = link_to "Nos mécènes", sponsors_path
-          %li.normal.contact
-            %a{ href: '#', title: 'Contact' } Contactez-nous !
-          %li.little
-            %a{ href: 'http://www.girlzinweb.com', title: 'Girlz in web' } Girlz in web
-          %li.little
-            %a{ href: 'http://girlzinweb.com/charte-editoriale/', title: 'Charte éditoriale' } Charte éditoriale
-          %li.little
-            %a{ href: 'http://girlzinweb.com/a-propos/contribuer/', title: 'Participer' } Participer
-          %li.little
-            %a{ href: 'http://girlzinweb.com/auteures/', title: 'Auteures' } Auteures
-          %li.little
-            %a{ href: 'http://girlzinweb.com/adherent-e-s-giw/', title: 'Accès Adhérent-e-s GIW' } Accès Adhérent-e-s GIW 
       %div#topnav
         %div.wrapper
           %ul#menu
@@ -73,7 +53,7 @@
             %li
               %a{ href: 'http://girlzinweb.com/contact/', title: 'Contacts' } Contacts
             
-      %div.main
+      %div.main.webkit
         %div.img
           %h1= link_to "Les Expertes du Numérique", root_path
           %p.wrapper
@@ -83,6 +63,28 @@
           = render 'pages/profile_search_form'
           
     = yield
+      
+    %nav#mobilenav.navbar.navbar-default{ role: 'navigation' }
+      %ul
+        %li.normal
+          = link_to 'Accueil',root_path
+        %li.normal.soumettre
+          = link_to 'Proposez une experte', new_profile_path
+        %li.normal.partners
+          = link_to "Nos mécènes", sponsors_path
+        %li.normal.contact
+          %a{ href: '#', title: 'Contact' } Contactez-nous !
+        %li.little
+          %a{ href: 'http://www.girlzinweb.com', title: 'Girlz in web' } Girlz in web
+        %li.little
+          %a{ href: 'http://girlzinweb.com/charte-editoriale/', title: 'Charte éditoriale' } Charte éditoriale
+        %li.little
+          %a{ href: 'http://girlzinweb.com/a-propos/contribuer/', title: 'Participer' } Participer
+        %li.little
+          %a{ href: 'http://girlzinweb.com/auteures/', title: 'Auteures' } Auteures
+        %li.little
+          %a{ href: 'http://girlzinweb.com/adherent-e-s-giw/', title: 'Accès Adhérent-e-s GIW' } Accès Adhérent-e-s GIW
+    
 
     %footer
       %nav#footernav
@@ -105,7 +107,7 @@
         = Date.current.year
         — tous droits réservés
               
-  /%a#up top
+    /%a#up top
 
       
     
