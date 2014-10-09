@@ -384,6 +384,7 @@ footer{text-align: center;
       input{margin: 0 0 10px 20px; position: relative; width: 500px; display: inline-block;}
     }
   }
+  .civilite{}
   .firstname, .lastname{width: 400px; font-size: 24px; max-width: 100%; }
   .avatar{width: 200px; height: 200px; background: #ebebeb; border: 1px solid #ccc; padding: 10px; position: relative;}
   .avatarUpload{float: left; position: relative; width: 300px;}
@@ -408,9 +409,18 @@ footer{text-align: center;
   .button:hover{box-shadow: 0px 5px 0px #C5233B;}
 }
 
+.why{position: fixed; display: block; font-size: 14px; color: $pink; min-width: 300px; background: white; box-shadow: 0px 0px 10px black; border: 1px solid $pink; min-height: 300px; right: 20px; top: 20%; padding: 20px; display: none;
+  label{display: block; margin: 0 0 5px 0; position: relative;}
+}
 
+/* Error messages */
+#profilesSubmit{
+  #avatar-error{display: block; clear: both; color: $pink;}
+  .subsections .left{
+    #publications-error, #conference-error, #teach-error, #opensource-error, #complement-error{position: absolute; top: 30px; color: white; background: $pink; padding: 10px; font-size: 12px;}
+  }
 
-
+}
 
 /*
 ---------------------------------- 

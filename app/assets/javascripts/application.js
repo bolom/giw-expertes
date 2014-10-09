@@ -17,8 +17,8 @@
 //= require jasny-bootstrap.min
 //= require jquery.flexslider-min
 //= require jquery.slicknav.min
-//= require bootstrapValidator.min
-//= require be_FR
+//= require jquery.validate.min
+//= require messages_fr.min
 //= require jquery.placeholder
 
 
@@ -52,29 +52,26 @@ $(function(){
   $('input, textarea').placeholder();
 });
 
-/* Required forms */
-$(document).ready(function() {
-    $('#addnew').bootstrapValidator({
-      container: 'tooltip',
-      feedbackIcons: {
-        valid: 'glyphicon glyphicon-ok',
-        invalid: 'glyphicon glyphicon-remove',
-        validating: 'glyphicon glyphicon-refresh'
-      },
-      fields: {
-        firstname: {
-          validators: {
-            notEmpty: {message: 'The first name is required'}
-          },
-        },  
-        lastname: {
-          validators: {
-            notEmpty: {message: 'The last name is required'}
-          }
-        }
-       }
-    });
-});
+
+/* Formulaire */
+$(function(){
+  $('#addnew').validate({
+  		rules: {
+  			firstname: {
+  				required: true,
+  				minlength: 2
+  			},
+  			lastname: {
+    			required: true,
+  				minlength: 2
+  			},
+  			linkedin:{
+    			required: true,
+    			url: true
+  			}
+  		}
+  });
+});	
 
 
 
