@@ -3,14 +3,15 @@
   %h2 Soumettre une experte
 
   %div.wrapper
-    
-    %form#addnew
+
+    / %form#addnew
+    = form_tag profiles_path, method: :post, multipart: true, id: :addnew do
 
       %div.subsections.civilite.clearfix
         %h3 Civilités
-        
-        %input{ name: 'firstname', value: '', placeholder: 'prénom (obligatoire)', class: "firstname", type: 'text', 'data-rule-required'=>'true', 'data-msg-required'=>' ' }
-        %input{ name: 'lastname', value: '', placeholder: 'nom (obligatoire)', class: "lastname", type: 'text', 'data-rule-required'=>'true', 'data-msg-required'=>' ' }
+
+        %input{ name: 'profile[firstname]', value: '', placeholder: 'prénom (obligatoire)', class: "firstname", type: 'text', 'data-rule-required'=>'true', 'data-msg-required'=>' ' }
+        %input{ name: 'profile[lastname]', value: '', placeholder: 'nom (obligatoire)', class: "lastname", type: 'text', 'data-rule-required'=>'true', 'data-msg-required'=>' ' }
 
       %div.subsections.clearfix
         %h3 Contact
@@ -21,147 +22,142 @@
             %span.btn.btn-default.btn-file
               %span.glyphicon.glyphicon-picture
               %span.fileinput-new Selectionnez une image
-              %input{ type: 'file', name: 'avatar', 'data-rule-required'=>'true', 'data-msg-required'=>''}
+              %input{ type: 'file', name: 'profile[picture]', 'data-rule-required'=>'true', 'data-msg-required'=>''}
             %a{ href: '#', 'data-dismiss'=> 'fileinput', class: "btn btn-default fileinput-exists" } Supprimer
-        
+
         %div.social
           %div.link.email
             %span.glyphicon.glyphicon-envelope
             %span.picto Adresse email
-            %input{ name: 'email', value: '', placeholder: 'monadress@domaine.com', type: 'email', 'data-rule-required'=>'true', 'data-msg-required'=>' ', 'data-rule-email'=>'true'}
+            %input{ name: 'profile[email]', value: '', placeholder: 'monadress@domaine.com', type: 'email', 'data-rule-required'=>'true', 'data-msg-required'=>' ', 'data-rule-email'=>'true'}
           %div.link.linkedin
             %span.picto LinkedIn
-            %input{ name: 'linkedin', value: '', placeholder: 'lien linkedin complet', type: 'text', 'data-rule-required'=>'true', 'data-msg-required'=>' '}
+            %input{ name: 'profile[linked_in_url]', value: '', placeholder: 'lien linkedin complet', type: 'text', 'data-rule-required'=>'true', 'data-msg-required'=>' '}
           %div.link.twitter
             %span.picto Twitter
-            %input{ name: 'twitter', value: '', placeholder: 'lien twitter complet', type: 'text'}
+            %input{ name: 'profile[twitter_url]', value: '', placeholder: 'lien twitter complet', type: 'text'}
           %div.link.facebook
             %span.picto Facebook
-            %input{ name: 'facebook', value: '', placeholder: 'lien facebook complet', type: 'text'}
+            %input{ name: 'profile[facebook_url]', value: '', placeholder: 'lien facebook complet', type: 'text'}
           %div.link.googleplus
             %span.picto Google Plus
-            %input{ name: 'google-plus', value: '', placeholder: 'lien google plus complet', type: 'text'}
+            %input{ name: 'profile[google_plus_url]', value: '', placeholder: 'lien google plus complet', type: 'text'}
 
       %div.subsections.publications.clearfix
         %h3 Expertise
-          
+
         %h4.clearfix Publications
         %p
           L'experte a-t-elle déjà publié un article sur un site web ou un blog pro/spécialisé ?
           %span.pink * obligatoire
-        
+
         %div.left
-          %input{ name: 'publications', value: 'publications-oui', id: 'publications-oui', type: 'radio', 'data-rule-required'=>'true', 'data-msg-required'=>'Vous devez préciser votre réponse', required: 'true' }
+          %input{ name: 'profile[author]', value: '1', id: 'publications-oui', type: 'radio', 'data-rule-required'=>'true', 'data-msg-required'=>'Vous devez préciser votre réponse', required: 'true' }
           %label{ for: 'publications-oui' } Oui
-          %input{ name: 'publications', value: 'publications-non', id: 'publications-non', type: 'radio', }
+          %input{ name: 'profile[author]', value: '0', id: 'publications-non', type: 'radio', }
           %label{ for: 'publications-non' } Non
           %span.why-publications
         %div.right
           %div.input-group
             %span.glyphicon.glyphicon-link
-            %input{ type: 'text', name: 'link-publications-first', value: '', placeholder: 'merci de nous indiquer le lien vers un article' }
+            %input{ type: 'text', name: 'profile[author_url_1]', value: '', placeholder: 'merci de nous indiquer le lien vers un article' }
           %div.input-group
             %span.glyphicon.glyphicon-link
-            %input{ type: 'text', name: 'link-publications-second', value: '', placeholder: 'lien vers un seconde article' }
+            %input{ type: 'text', name: 'profile[author_url_2]', value: '', placeholder: 'lien vers un seconde article' }
           %div.input-group
             %span.glyphicon.glyphicon-link
-            %input{ type: 'text', name: 'link-publications-third', value: '', placeholder: 'lien vers un troisième article' }
+            %input{ type: 'text', name: 'profile[author_url_3]', value: '', placeholder: 'lien vers un troisième article' }
 
         %h4.clearfix Conférences
         %p
           L'experte est-elle déjà intervenue dans les medias ou à une conférence ?
           %span.pink * obligatoire
-        
+
         %div.left
-          %input{ name: 'conference', value: 'conference-oui', id: 'conference-oui', type: 'radio', 'data-rule-required'=>'true', 'data-msg-required'=>'Vous devez préciser votre réponse', required: 'true' }
+          %input{ name: 'profile[speaker]', value: '1', id: 'conference-oui', type: 'radio', 'data-rule-required'=>'true', 'data-msg-required'=>'Vous devez préciser votre réponse', required: 'true' }
           %label{ for: 'conference-oui' } Oui
-          %input{ name: 'conference', value: 'conference-non', id: 'conference-non', type: 'radio' }
+          %input{ name: 'profile[speaker]', value: '0', id: 'conference-non', type: 'radio' }
           %label{ for: 'conference-non' } Non
         %div.right
           %div.input-group
             %span.glyphicon.glyphicon-link
-            %input{ type: 'text', name: 'link-conference-first', value: '', placeholder: 'merci de nous indiquer le lien vers la conférence ou le media' }
+            %input{ type: 'text', name: 'profile[speaker_url_1]', value: '', placeholder: 'merci de nous indiquer le lien vers la conférence ou le media' }
           %div.input-group
             %span.glyphicon.glyphicon-link
-            %input{ type: 'text', name: 'link-conference-second', value: '', placeholder: 'le lien vers une seconde conférence ou media' }
+            %input{ type: 'text', name: 'profile[speaker_url_2]', value: '', placeholder: 'le lien vers une seconde conférence ou media' }
           %div.input-group
             %span.glyphicon.glyphicon-link
-            %input{ type: 'text', name: 'link-conference-third', value: '', placeholder: 'le lien vers une troisième conférence ou media' }
-          
+            %input{ type: 'text', name: 'profile[speaker_url_3]', value: '', placeholder: 'le lien vers une troisième conférence ou media' }
+
         %h4.clearfix Enseignement
         %p
           L'experte enseigne-t-elle ?
           %span.pink * obligatoire
-        
+
         %div.left
-          %input{ name: 'teach', value: 'teach-oui', id: 'teach-oui', type: 'radio', 'data-rule-required'=>'true', 'data-msg-required'=>'Vous devez préciser votre réponse', required: 'true' }
+          %input{ name: 'profile[teacher]', value: '1', id: 'teach-oui', type: 'radio', 'data-rule-required'=>'true', 'data-msg-required'=>'Vous devez préciser votre réponse', required: 'true' }
           %label{ for: 'teach-oui' } Oui
-          %input{ name: 'teach', value: 'teach-non', id: 'teach-non', type: 'radio' }
+          %input{ name: 'profile[teacher]', value: '0', id: 'teach-non', type: 'radio' }
           %label{ for: 'teach-non' } Non
         %div.right
           %div.input-group
             %span.glyphicon.glyphicon-link
-            %input{ type: 'text', name: 'link-teach-first', value: '', placeholder: 'merci de nous indiquer dans quelle(s) école(s) (séparez par des virgules)' }  
-          
+            %input{ type: 'text', name: 'profile[teacher_schools]', value: '', placeholder: 'merci de nous indiquer dans quelle(s) école(s) (séparez par des virgules)' }
+
         %h4.clearfix Open-Source
         %p
           L'experte a-t-elle participé à un projet open source ?
           %span.pink * obligatoire
-        
+
         %div.left
-          %input{ name: 'opensource', value: 'opensource-oui', id: 'opensource-oui', type: 'radio', 'data-rule-required'=>'true', 'data-msg-required'=>'Vous devez préciser votre réponse', required: 'true' }
+          %input{ name: 'profile[open_source]', value: '1', id: 'opensource-oui', type: 'radio', 'data-rule-required'=>'true', 'data-msg-required'=>'Vous devez préciser votre réponse', required: 'true' }
           %label{ for: 'opensource-oui' } Oui
-          %input{ name: 'opensource', value: 'opensource-non', id: 'opensource-non', type: 'radio' }
+          %input{ name: 'profile[open_source]', value: '0', id: 'opensource-non', type: 'radio' }
           %label{ for: 'opensource-non' } Non
         %div.right
           %div.input-group
             %span.glyphicon.glyphicon-link
-            %input{ type: 'text', name: 'link-conference-first', value: '', placeholder: 'merci de nous indiquer un lien vers ce projet' }
+            %input{ type: 'text', name: 'profile[open_source_url_1]', value: '', placeholder: 'merci de nous indiquer un lien vers ce projet' }
           %div.input-group
             %span.glyphicon.glyphicon-link
-            %input{ type: 'text', name: 'link-conference-second', value: '', placeholder: 'le lien vers un second projet' }
+            %input{ type: 'text', name: 'profile[open_source_url_2]', value: '', placeholder: 'le lien vers un second projet' }
           %div.input-group
             %span.glyphicon.glyphicon-link
-            %input{ type: 'text', name: 'link-conference-third', value: '', placeholder: 'le lien vers un troisième projet' }  
-        
+            %input{ type: 'text', name: 'profile[open_source_url_3]', value: '', placeholder: 'le lien vers un troisième projet' }
+
       %div.subsections.tags.clearfix
         %h3 Les mots clés
         %p
-          Sélectionnez les compétences clées de votre experte (3 compétences maximum) 
+          Sélectionnez les compétences clées de votre experte (3 compétences maximum)
           %span.pink * obligatoire
-          
+
         %div.form-group.selectbox
-            
+
           - Domain.all.each do |domain|
-            
+
             %div.domain
-              %select{ id: dom_id(domain), name: dom_id(domain), multiple: true, title: domain.label, class: 'form-control input-sm selectpicker', value: '' }
-              
+              %select{ id: dom_id(domain), name: 'profile[skill_ids][]', multiple: true, title: domain.label, class: 'form-control input-sm selectpicker', value: '' }
+
                 - domain.skills.each do |skill|
                   %option{ value: skill.id }= skill.label
-                    
+
       %div.subsections.complement.clearfix
         %h3 Informations complémentaires
         %p
           Proposez-vous le profil d'une autre personne ?
           /'
-          %span.pink * obligatoire       
-        
+          %span.pink * obligatoire
+
         %div.left
-          %input{ name: 'complement', value: 'complement-oui', id: 'complement-oui', type: 'radio', 'data-rule-required'=>'true', 'data-msg-required'=>'Vous devez préciser votre réponse', required: 'true' }
+          %input{ name: 'profile[someone_else]', value: '1', id: 'complement-oui', type: 'radio', 'data-rule-required'=>'true', 'data-msg-required'=>'Vous devez préciser votre réponse', required: 'true' }
           %label{ for: 'complement-oui' } Oui
-          %input{ name: 'complement', value: 'complement-non', id: 'complement-non', type: 'radio' }
+          %input{ name: 'profile[someone_else]', value: '0', id: 'complement-non', type: 'radio' }
           %label{ for: 'complement-non' } Non
         %div.right
           %div.input-group
             %span.glyphicon.glyphicon-link
-            %input{ type: 'text', name: 'link-complement-first', value: '', placeholder: 'merci de nous indiquer votre email pour référence' } 
-        
-        
-            
+            %input{ type: 'text', name: 'profile[sender_email]', value: '', placeholder: 'merci de nous indiquer votre email pour référence' }
+
+
+
       %input{ name: 'submit', value: 'soumettez une experte', type: 'submit', class: 'button'}
-
-
-
-
-       

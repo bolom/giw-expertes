@@ -2,7 +2,9 @@ Rails.application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
 
-  resources :profiles
+  resources :profiles do
+    get :created, on: :member 
+  end
 
   root to: "pages#home"
   get 'sponsors' => 'pages'
