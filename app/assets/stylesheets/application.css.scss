@@ -539,7 +539,7 @@ footer{text-align: center;
 .fixed{display: block; width: 100px; height: 20px; position: fixed; top: 300px; background: red; z-index: 10;}
 
 
-.slicknav_menu{background: rgba(255,255,255,0.2); display: none; width: 100%; border-bottom: 1px solid white; padding: 0; position: fixed; z-index: 10;
+.slicknav_menu{background: rgba(255,255,255,0.8); display: none; width: 100%; border-bottom: 1px solid #ccc; padding: 0; position: fixed; z-index: 10;
   .slicknav_menutxt{font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; font-weight: 300; text-shadow: none; color: $greystrong;}
   .slicknav_btn{background: none;}
   .slicknav_icon-bar{background-color: $greystrong; box-shadow: none;}
@@ -620,6 +620,7 @@ section{padding: 30px 0;
 
 #profilesSubmit{padding: 0 10px;
   .firstname, .lastname{margin: 0 0 10px 0;}
+  .avatarUpload{margin: 0 0 50px 0; float: none; position: relative; display: block;}
   .social{margin: 10px 0 0 0; width: 100%;
     .link{margin: 0 0 10px 0; position: relative;
       input{display: block; position: relative; margin: 10px 0 0 0; width: 310px;}
