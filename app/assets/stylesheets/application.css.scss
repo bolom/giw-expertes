@@ -413,6 +413,9 @@ footer{text-align: center;
   .button{margin: 50px auto 0 auto; background: $pink; color: white; border: 0; display: block;}
   .button:hover{box-shadow: 0px 5px 0px #C5233B;}
 }
+#theprofile.created{text-align: center;
+  p{text-align: center; font-size: 16px; line-height: normal; margin: 0 0 10px 0; color: $pink;}
+}
 
 .why{position: fixed; display: block; font-size: 14px; color: $pink; min-width: 300px; background: white; box-shadow: 0px 0px 10px black; border: 1px solid $pink; min-height: 300px; right: 20px; top: 20%; padding: 20px; display: none;
   label{display: block; margin: 0 0 5px 0; position: relative;}
