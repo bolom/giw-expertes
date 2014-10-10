@@ -420,9 +420,9 @@ footer{text-align: center;
 
 /* Error messages */
 #profilesSubmit{
-  #avatar-error{display: block; clear: both; color: $pink;}
+  #profile\[picture\]-error{display: block; clear: both; color: $pink;}
   .subsections .left{
-    #publications-error, #conference-error, #teach-error, #opensource-error, #complement-error{position: absolute; top: 30px; color: white; background: $pink; padding: 10px; font-size: 12px;}
+    #profile\[author\]-error, #profile\[speaker\]-error, #profile\[teacher\]-error, #profile\[open_source\]-error, #profile\[someone_else\]-error{position: absolute; top: 30px; color: white; background: $pink; padding: 10px; font-size: 12px;}
   }
 
 }

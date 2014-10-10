@@ -16,14 +16,17 @@
       %div.subsections.clearfix
         %h3 Contact
 
-        %div.avatarUpload
-          %div{ 'data-provides'=> "fileinput", class: "fileinput fileinput-new avatar" }
-          %div
-            %span.btn.btn-default.btn-file
-              %span.glyphicon.glyphicon-picture
-              %span.fileinput-new Selectionnez une image
-              %input{ type: 'file', name: 'profile[picture]', 'data-rule-required'=>'true', 'data-msg-required'=>''}
-            %a{ href: '#', 'data-dismiss'=> 'fileinput', class: "btn btn-default fileinput-exists" } Supprimer
+        %div.avatarUpload 
+          %div.fileinput.fileinput-new{ 'data-provides'=> "fileinput", style: 'width: 200px; height: 200px;' }
+            %div.fileinput-new.thumbnail{ style: 'width: 200px; height: 200px;' }
+              %img{ src: 'http://www.placehold.it/200x200/EFEFEF/AAAAAA&text=400px+/+400px' }
+            %div.fileinput-preview.fileinput-exists.thumbnail{ style: 'width: 200px; height: 200px;' }
+            %div
+              %span.btn.btn-default.btn-file
+                %span.fileinput-new Sélectionnez une image
+                %span.fileinput-exists Changer l'image
+                %input{ type: 'file', name: 'profile[picture]', 'data-rule-required'=>'true', 'data-msg-required'=>' Vous devez ajouter une photo. ' }
+              %a.btn.btn-default.fileinput-exists{ href: '#', 'data-dismiss'=>'fileinput' } Supprimer  
 
         %div.social
           %div.link.email
