@@ -11,7 +11,7 @@
  * file per style scope.
  *
  */
- 
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "bootstrap-select";
@@ -27,7 +27,7 @@
 
 
 /*
----------------------------------- 
+----------------------------------
   VARIABLES
 ----------------------------------
 */
@@ -67,7 +67,7 @@ a,button,input,div,span,p{
 }
 
 /*
----------------------------------- 
+----------------------------------
   COMMON
 ----------------------------------
 */
@@ -107,9 +107,8 @@ section{padding: 50px 0; text-align: center;
 ::selection{background: rgba(0,0,0,0.6); color: white;}
 ::-moz-selection{background: rgba(0,0,0,0.6); color: white;}
 
-
 /*
----------------------------------- 
+----------------------------------
   NAVIGATION
 ----------------------------------
 */
@@ -129,7 +128,7 @@ section{padding: 50px 0; text-align: center;
 
 
 /*
----------------------------------- 
+----------------------------------
   HEADER
 ----------------------------------
 */
@@ -158,7 +157,7 @@ header{
 
 
 /*
----------------------------------- 
+----------------------------------
   FOOTER
 ----------------------------------
 */
@@ -181,7 +180,7 @@ footer{text-align: center;
 
 
 /*
----------------------------------- 
+----------------------------------
   SEARCH FORM
 ----------------------------------
 */
@@ -201,14 +200,15 @@ footer{text-align: center;
   .or{color: white; font-size: 24px;margin: 0 10px; display: inline-block; position: relative;}
   .form-group{display: inline-block;}
   .submit{position: relative; display: inline-block;
-    .picto{position: relative; top: 6px; left: 55px; background: url(asset-path('search.png')) no-repeat; width: 31px; height: 31px; content: " "; z-index: 2; display: inline-block;} 
+    .picto{position: relative; top: 6px; left: 55px; background: url(asset-path('search.png')) no-repeat; width: 31px; height: 31px; content: " "; z-index: 2; display: inline-block;}
   }
   .byname{background: url(asset-path('bg-field-transparent.png')) repeat; width: 220px;}
   .selectbox{display: inline-block; position: relative; width: 338px; height: 56px; margin: 0 !important; padding: 0 !important; top: -5px !important;}
-  
+
   /* BOOTSTRAP */
-  .show-tick{height: 56px; width: 340px; margin: 0; padding: 0; position: relative;}
-  button.btn.dropdown-toggle.selectpicker.btn-default{height: 56px; border-radius: 0; width: 340px; margin: 0; border: 0; font-size: 26px; color: $bluestrong;}
+  .show-tick{height: 56px; width: 340px; margin: 0; padding: 0; position: relative; border-radius: 0;}
+  button.btn.dropdown-toggle.selectpicker.btn-default{border-radius: 0; width: 340px; margin: 0; border: 0; font-size: 26px; color: $bluestrong; border-color: white; padding: 0 12px; line-height: 56px;}
+  .bootstrap-select.btn-group .btn .filter-option{}
   .btn-group.open .dropdown-toggle{box-shadow: inset 0px 0px 5px $pink; outline: none !important; -webkit-appearance: none;}
   .bootstrap-select .btn:focus{outline: none; -webkit-appearance: none;}
   .btn-default:hover{background: white; box-shadow: 0px 0px 10px white;}
@@ -223,7 +223,7 @@ footer{text-align: center;
 
 
 /*
----------------------------------- 
+----------------------------------
   PROFIL LIST ITEMS
 ----------------------------------
 */
@@ -286,7 +286,7 @@ footer{text-align: center;
 
 
 /*
----------------------------------- 
+----------------------------------
   SINGLE PROFIL
 ----------------------------------
 */
@@ -349,11 +349,11 @@ footer{text-align: center;
       }
     }
   }/* end right */
-  
+
 }
 
 /*
----------------------------------- 
+----------------------------------
   SUBMIT PROFILE
 ----------------------------------
 */
@@ -365,7 +365,7 @@ footer{text-align: center;
   input[type=text], input[type=email]{height: 42px; line-height: 42px; background: #e8faff; border: none; padding: 0 10px; outline: none; appearance: none; -webkit-appearance: none;}
   input[type=text]:focus, input[type=email]:focus{box-shadow: inset 0px 0px 5px $pink;}
   input[type=text].error, input[type=email].error{background: $pink; color: white;}
-  
+
   input[type=text].error ::-webkit-input-placeholder,
   input[type=text].error :-moz-placeholder,
   input[type=text].error ::-moz-placeholder,
@@ -374,12 +374,12 @@ footer{text-align: center;
   input[type=email].error :-moz-placeholder,
   input[type=email].error ::-moz-placeholder,
   input[type=email].error :-ms-input-placeholder{color: white;}
-  
+
   input.error::-webkit-input-placeholder{color: white;}
   input.error:-moz-placeholder{color: white;}
   input.error::-moz-placeholder{color: white;}
   input.error:-ms-input-placeholder{color: white;}
-  
+
   .subsections{width: 100%;
     .left{position: relative; float: left; width: 200px; margin: 0 0 0 50px; max-width: 100%;
       label{margin: 0 20px 0 5px; position: relative;}
@@ -431,7 +431,7 @@ footer{text-align: center;
 }
 
 /*
----------------------------------- 
+----------------------------------
   PARTERS
 ----------------------------------
 */
@@ -459,7 +459,7 @@ footer{text-align: center;
 }
 
 /*
----------------------------------- 
+----------------------------------
   SECTIONS
 ----------------------------------
 */
@@ -504,7 +504,7 @@ footer{text-align: center;
 
 
 /*
----------------------------------- 
+----------------------------------
   MODAL CONTACT FORMS
 ----------------------------------
 */
@@ -529,7 +529,7 @@ footer{text-align: center;
 
 
 /*
----------------------------------- 
+----------------------------------
   MOBILE NAV
 ----------------------------------
 */
@@ -555,13 +555,13 @@ footer{text-align: center;
       .little{line-height: 30px;}
     }
   }
-  
+
 }
 
 
 
 /*
----------------------------------- 
+----------------------------------
   MEDIA QUERIES
 ----------------------------------
 */
@@ -648,7 +648,7 @@ section{padding: 30px 0;
 
 
 
-  
+
 }
 
 /* iPads (portrait and landscape) ----------- */
@@ -699,7 +699,7 @@ only screen and ( min-resolution: 2dppx){
 
 footer .giw{background: url(asset-path('GIW-small@2x.png')) no-repeat; background-size: contain;}
 
-#searchform .picto{background: url(asset-path('search@2x.png')) no-repeat; background-size: contain;}
+#searchform .submit .picto{background: url(asset-path('search@2x.png')) no-repeat; background-size: contain;}
 #submit .picto{background: url(asset-path('picto-submit@2x.png')) no-repeat; background-size: contain;}
 #label .picto{background: url(asset-path('picto-label-gold@2x.png')) no-repeat; background-size: contain;}
 #contact .social{
@@ -709,7 +709,7 @@ footer .giw{background: url(asset-path('GIW-small@2x.png')) no-repeat; backgroun
   .linkedin{background: url(asset-path('linkedin@2x.png')) no-repeat; background-size: contain;}
 }
 
-#profilesSubmit .social{ 
+#profilesSubmit .social{
   .linkedin .picto:before{background: url(asset-path('linkedin-small@2x.png')) no-repeat; background-size: contain;}
   .twitter .picto:before{background: url(asset-path('twitter-small@2x.png')) no-repeat; background-size: contain;}
   .facebook .picto:before{background: url(asset-path('facebook-small@2x.png')) no-repeat; background-size: contain;}
@@ -731,7 +731,7 @@ footer .giw{background: url(asset-path('GIW-small@2x.png')) no-repeat; backgroun
 
 
 /*
----------------------------------- 
+----------------------------------
   LOADER
 ----------------------------------
 */
@@ -857,19 +857,3 @@ footer .giw{background: url(asset-path('GIW-small@2x.png')) no-repeat; backgroun
   top: 18.75px;
   left: 10.82532px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
