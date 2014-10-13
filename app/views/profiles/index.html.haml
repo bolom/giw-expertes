@@ -9,7 +9,10 @@
         %span= skill.label
 
   %div.wrapper
-    %ul.profilist
-      = render partial: 'profiles/profile', collection: @profiles
+    - if @profiles.present?
+      %ul.profilist
+        = render partial: 'profiles/profile', collection: @profiles
 
-    = paginate @profiles
+      = paginate @profiles
+    - else
+      %div.empty
