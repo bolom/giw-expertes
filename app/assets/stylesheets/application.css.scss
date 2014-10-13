@@ -334,8 +334,8 @@ footer{text-align: center;
     h4{font-size: 18px; font-weight: 700; color: $pink;}
     .expert, li{list-style: none; padding: 0; margin: 0;}
     .expert{width: 100%; margin: 20px 0 0 0; position: relative;
-      li{display: inline-block; font-size: 18px; background: $pink; color: white; height: 35px;
-        a{color: white; padding: 0 15px; line-height: 35px;}
+      li{display: inline-block; font-size: 18px; background: $pink; color: white; height: 35px; margin: 0 0 5px 0;
+        a{color: white; padding: 0 15px; line-height: 35px; white-space: nowrap;}
       }
     }
     .contact{width: 100%; position: relative; margin: 20px 0 0 0;
