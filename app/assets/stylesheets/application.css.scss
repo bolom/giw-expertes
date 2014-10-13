@@ -393,6 +393,7 @@ footer{text-align: center;
   .firstname, .lastname{width: 400px; font-size: 24px; max-width: 100%; }
   .avatar{width: 200px; height: 200px; background: #ebebeb; border: 1px solid #ccc; padding: 10px; position: relative;}
   .avatarUpload{float: left; position: relative; width: 300px;}
+  span.fileinput-new:after{content: "*"; display: inline-block; width: 10px; margin: 0 0 0 5px; color: $pink;}
   .social{float: left; position: relative; width: 600px; margin: 0 0 0 50px;
     .link{margin: 0 0 10px 0; position: relative;
       input{width: 400px; max-width: 100%;}
@@ -401,11 +402,13 @@ footer{text-align: center;
     .picto{width: 150px; position: relative; display: inline-block;}
     .picto:before{width: 24px; height: 24px; display: inline-block; position: relative; margin: 0 10px 0 0; content: "."; vertical-align: middle; text-indent: -9999px;}
     .linkedin .picto:before{background: url(asset-path('linkedin-small.png')) no-repeat;}
+    .linkedin .picto:after{content: "*"; display: inline-block; width: 10px; margin: 0 0 0 5px; color: $pink; }
     .twitter .picto:before{background: url(asset-path('twitter-small.png')) no-repeat;}
     .facebook .picto:before{background: url(asset-path('facebook-small.png')) no-repeat;}
     .googleplus .picto:before{background: url(asset-path('google-plus-small.png')) no-repeat;}
     .email .picto{width: 117px;}
     .email .picto:before{content: ""; display: none;}
+    .email .picto:after{content: "*"; display: inline-block; width: 10px; margin: 0 0 0 5px; color: $pink; }
   }
   .tags{
     .domain{position: relative; margin: 0 0 20px 0;}
@@ -415,6 +418,10 @@ footer{text-align: center;
 }
 #theprofile.created{text-align: center;
   p{text-align: center; font-size: 16px; line-height: normal; margin: 0 0 10px 0; color: $pink;}
+}
+
+.requiredMsg{display: block; clear: both; width: 100%; position: relative; text-align: center;
+  p{background: $pink; color: white; padding: 10px 20px; display: inline-block; font-weight: 700; font-size: 12px !important; text-align: center; position: relative;}
 }
 
 .why{position: fixed; display: block; font-size: 14px; color: $pink; min-width: 300px; background: white; box-shadow: 0px 0px 10px black; border: 1px solid $pink; min-height: 300px; right: 20px; top: 20%; padding: 20px; display: none;
