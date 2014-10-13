@@ -50,6 +50,7 @@ gem 'carrierwave'
 gem 'carrierwave-ftp', require: 'carrierwave/storage/ftp/all'
 gem 'kaminari'
 gem 'kaminari-bootstrap'
+gem 'linkedin-scraper'
 
 group :development, :test do
   gem 'sqlite3'
