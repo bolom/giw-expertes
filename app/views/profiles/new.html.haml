@@ -140,14 +140,13 @@
           %span.pink *
 
         %div.form-group.selectbox{id: 'form-group selectbox'}
+        
+          %select{ id: 'selectSkills', name: 'profile[skill_ids][]', multiple: true, class: 'form-control input-sm selectpicker', value: '', 'data-max-options'=>'3' }
 
-          - Domain.all.each do |domain|
-
-            %div.domain
-              %select{ id: dom_id(domain), name: 'profile[skill_ids][]', multiple: true, title: domain.label, class: 'form-control input-sm selectpicker', value: '' }
-
+            - Domain.all.each do |domain|
+              %optgroup{ label: domain.label }
                 - domain.skills.each do |skill|
-                  %option{value: skill.id }= skill.label
+                  %option{ value: skill.id }= skill.label
 
       %div.subsections.complement.clearfix
         %h3 Informations complémentaires

@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require bootstrap-sprockets
 //= require bootstrap-select
+//= require defaults-fr_FR
 //= require jasny-bootstrap.min
 //= require jquery.flexslider-min
 //= require jquery.slicknav.min

@@ -560,7 +560,7 @@ footer{text-align: center;
       .normal{background: $blue; font-weight: 700; font-size: 20px;
         a{color: white;}
       }
-      .soumettre{background: $pink;}
+      .soumettre{}
       .little{line-height: 30px;}
     }
   }
@@ -672,7 +672,7 @@ section{padding: 30px 0;
 }
 
 /* iPads (portrait) ----------- */
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+@media only screen and (min-device-width : 600px) and (max-device-width : 1024px) and (orientation : portrait) {
 
 .home .main {
   .img h1{top: 55px;}
