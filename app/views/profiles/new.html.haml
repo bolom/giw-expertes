@@ -139,7 +139,7 @@
           Sélectionnez les compétences clées de votre experte (3 compétences maximum)
           %span.pink *
 
-        %div.form-group.selectbox
+        %div.form-group.selectbox{id: 'form-group selectbox'}
 
           - Domain.all.each do |domain|
 
@@ -147,7 +147,7 @@
               %select{ id: dom_id(domain), name: 'profile[skill_ids][]', multiple: true, title: domain.label, class: 'form-control input-sm selectpicker', value: '' }
 
                 - domain.skills.each do |skill|
-                  %option{ value: skill.id }= skill.label
+                  %option{value: skill.id }= skill.label
 
       %div.subsections.complement.clearfix
         %h3 Informations complémentaires
