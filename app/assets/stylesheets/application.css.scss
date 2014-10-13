@@ -698,6 +698,12 @@ only screen and ( min-resolution: 2dppx){
 
 .home .main .img h1{background: url(asset-path('big-giw@2x.png')) no-repeat; background-size: contain;}
 
+.profiles .main, .sponsors .main{
+  .img{background: url(asset-path('bg-top-small@2x.png')) repeat-x; background-size: 210px 207px;
+      h1 a{background: url(asset-path('GIW-expert-small@2x.png')) no-repeat; background-size: contain;}
+  }
+}
+
 footer .giw{background: url(asset-path('GIW-small@2x.png')) no-repeat; background-size: contain;}
 
 #searchform .submit .picto{background: url(asset-path('search@2x.png')) no-repeat; background-size: contain;}
