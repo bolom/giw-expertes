@@ -14,13 +14,13 @@ ActiveAdmin.register Sponsor do
   #   permitted
   # end
 
-  permit_params :name, :url, :remote_logo_url, :rank, :order
+  permit_params :name, :url, :logo, :rank, :order
 
   form do |f|
     f.inputs do
       f.input :name
       f.input :url
-      f.input :remote_logo_url
+      f.input :logo
       f.input :rank
       f.input :order
     end
