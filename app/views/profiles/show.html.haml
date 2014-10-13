@@ -14,7 +14,7 @@
         = @profile.last_position
       %ul.expert.clearfix
         - @profile.skills.limit(3).each do |skill|
-          %li= link_to skill.label, '#', title: skill.label, class: :tag
+          %li= link_to skill.label, profiles_path(byexpertise: [skill.id]), title: skill.label, class: :tag
 
       .linked_in_url= link_to @profile.linked_in_url
 

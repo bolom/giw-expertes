@@ -439,20 +439,20 @@ footer{text-align: center;
 
 /*
 ----------------------------------
-  PARTERS
+  PARTNERS
 ----------------------------------
 */
 
-#parnersOne{background: $blue; border-bottom: 1px solid white;}
-#parnersTwo{background: #24afd6; border-bottom: 1px solid white;}
-#parnersThree{background: #469ab3; border-bottom: 1px solid white;}
-#parnersFour{background: #628a96; border-bottom: 1px solid white;}
-#parnersFive{background: #797c7d;}
+#partnersOne{background: $blue; border-bottom: 1px solid white;}
+#partnersTwo{background: #24afd6; border-bottom: 1px solid white;}
+#partnersThree{background: #469ab3; border-bottom: 1px solid white;}
+#partnersFour{background: #628a96; border-bottom: 1px solid white;}
+#partnersFive{background: #797c7d;}
 
 .partnerslide{padding: 50px 0; vertical-align: middle; position: relative; height: 300px;
   .slides{height: 200px; text-align: center; z-index: 1;}
-  li{width: 200px; height: 200px; vertical-align: middle; position: relative; text-align: center; padding: 0 10px; box-sizing: border-box;
-    a{width: 200px; height: 200px; position: relative; line-height: 200px;
+  li{width: 250px; height: 200px; vertical-align: middle; position: relative; text-align: center; padding: 0 10px; box-sizing: border-box;
+    a{width: 200px; height: 200px; position: relative; line-height: 200px; display: inline-block;
       img{width: 100%; height: auto;}
     }
   }
