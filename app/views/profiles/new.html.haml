@@ -10,13 +10,13 @@
       %div.subsections.civilite.clearfix
         %h3 Civilités
 
-        %input{ name: 'profile[firstname]', value: '', placeholder: 'prénom (obligatoire)', class: "firstname", type: 'text', 'data-rule-required'=>'true', 'data-msg-required'=>' ' }
-        %input{ name: 'profile[lastname]', value: '', placeholder: 'nom (obligatoire)', class: "lastname", type: 'text', 'data-rule-required'=>'true', 'data-msg-required'=>' ' }
+        %input{ name: 'profile[firstname]', value: '', placeholder: 'prénom *', class: "firstname", type: 'text', 'data-rule-required'=>'true', 'data-msg-required'=>' ' }
+        %input{ name: 'profile[lastname]', value: '', placeholder: 'nom *', class: "lastname", type: 'text', 'data-rule-required'=>'true', 'data-msg-required'=>' ' }
 
       %div.subsections.clearfix
         %h3 Contact
 
-        %div.avatarUpload 
+        %div.avatarUpload
           %div.fileinput.fileinput-new{ 'data-provides'=> "fileinput", style: 'width: 200px; height: 200px;' }
             %div.fileinput-new.thumbnail{ style: 'width: 200px; height: 200px;' }
               %img{ src: 'http://www.placehold.it/200x200/EFEFEF/AAAAAA&text=400px+/+400px' }
@@ -26,7 +26,7 @@
                 %span.fileinput-new Sélectionnez une image
                 %span.fileinput-exists Changer l'image
                 %input{ type: 'file', name: 'profile[picture]', 'data-rule-required'=>'true', 'data-msg-required'=>' Vous devez ajouter une photo. ' }
-              %a.btn.btn-default.fileinput-exists{ href: '#', 'data-dismiss'=>'fileinput' } Supprimer  
+              %a.btn.btn-default.fileinput-exists{ href: '#', 'data-dismiss'=>'fileinput' } Supprimer
 
         %div.social
           %div.link.email
@@ -49,15 +49,15 @@
       %div.subsections.publications.clearfix
         %h3 Expériences professionnelles
         %div
-          %input{ name: 'profile[last_position]', value: '', placeholder: 'dernier poste occupé (obligatoire)', class: "position", type: 'text', 'data-rule-required'=>'true', 'data-msg-required'=>' ' }
-      
+          %input{ name: 'profile[last_position]', value: '', placeholder: 'dernier poste occupé *', class: "position", type: 'text', 'data-rule-required'=>'true', 'data-msg-required'=>' ' }
+
       %div.subsections.publications.clearfix
         %h3 Expertise
 
         %h4.clearfix Publications
         %p
           L'experte a-t-elle déjà publié un article sur un site web ou un blog pro/spécialisé ?
-          %span.pink * obligatoire
+          %span.pink *
 
         %div.left
           %input{ name: 'profile[author]', value: '1', id: 'publications-oui', type: 'radio', 'data-rule-required'=>'true', 'data-msg-required'=>'Vous devez préciser votre réponse', required: 'true' }
@@ -79,7 +79,7 @@
         %h4.clearfix Conférences
         %p
           L'experte est-elle déjà intervenue dans les medias ou à une conférence ?
-          %span.pink * obligatoire
+          %span.pink *
 
         %div.left
           %input{ name: 'profile[speaker]', value: '1', id: 'conference-oui', type: 'radio', 'data-rule-required'=>'true', 'data-msg-required'=>'Vous devez préciser votre réponse', required: 'true' }
@@ -100,7 +100,7 @@
         %h4.clearfix Enseignement
         %p
           L'experte enseigne-t-elle ?
-          %span.pink * obligatoire
+          %span.pink *
 
         %div.left
           %input{ name: 'profile[teacher]', value: '1', id: 'teach-oui', type: 'radio', 'data-rule-required'=>'true', 'data-msg-required'=>'Vous devez préciser votre réponse', required: 'true' }
@@ -115,7 +115,7 @@
         %h4.clearfix Open-Source
         %p
           L'experte a-t-elle participé à un projet open source ?
-          %span.pink * obligatoire
+          %span.pink *
 
         %div.left
           %input{ name: 'profile[open_source]', value: '1', id: 'opensource-oui', type: 'radio', 'data-rule-required'=>'true', 'data-msg-required'=>'Vous devez préciser votre réponse', required: 'true' }
@@ -137,7 +137,7 @@
         %h3 Les mots clés
         %p
           Sélectionnez les compétences clées de votre experte (3 compétences maximum)
-          %span.pink * obligatoire
+          %span.pink *
 
         %div.form-group.selectbox
 
@@ -154,7 +154,7 @@
         %p
           Proposez-vous le profil d'une autre personne ?
           /'
-          %span.pink * obligatoire
+          %span.pink *
 
         %div.left
           %input{ name: 'profile[someone_else]', value: '1', id: 'complement-oui', type: 'radio', 'data-rule-required'=>'true', 'data-msg-required'=>'Vous devez préciser votre réponse', required: 'true' }
@@ -166,6 +166,8 @@
             %span.glyphicon.glyphicon-link
             %input{ type: 'text', name: 'profile[sender_email]', value: '', placeholder: 'merci de nous indiquer votre email pour référence' }
 
-
+      %div.requiredMsg.clearfix
+        %p
+          * champs obligatoires
 
       %input{ name: 'submit', value: 'soumettez cette experte', type: 'submit', class: 'button'}

@@ -68,7 +68,19 @@ $(function(){
   			linkedin:{
     			required: true,
     			url: true
-  			}
+  			},
+        'profile[twitter_url]':{
+          required: false,
+          url: true
+        },
+        'profile[facebook_url]':{
+          required: false,
+          url: true
+        },
+        'profile[google_plus_url]':{
+          required: false,
+          url: true
+        }
   		}
   });
     $('.searchform input').keydown(function(event){
