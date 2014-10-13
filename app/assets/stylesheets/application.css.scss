@@ -444,8 +444,8 @@ footer{text-align: center;
 
 .partnerslide{padding: 50px 0; vertical-align: middle; position: relative; height: 300px;
   .slides{height: 200px; text-align: center; z-index: 1;}
-  li{width: 200px; height: 200px; vertical-align: middle; position: relative; text-align: center; padding: 0 10px; box-sizing: border-box;
-    a{width: 200px; height: 200px; position: relative; line-height: 200px;
+  li{width: 250px; height: 200px; vertical-align: middle; position: relative; text-align: center; padding: 0 10px; box-sizing: border-box;
+    a{width: 200px; height: 200px; position: relative; line-height: 200px; display: inline-block;
       img{width: 100%; height: auto;}
     }
   }

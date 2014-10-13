@@ -34,8 +34,8 @@ $(window).load(function(){
     directionNav: true,
     pauseOnAction: false,
     pauseOnHover: true,
-    itemWidth: 210,
-    itemMargin: 20,
+    itemWidth: 250,
+    itemMargin: 50,
     start: function(slider){
       $('.loader').removeClass('circles');
     }
