@@ -22,10 +22,10 @@
         /%a.btcontact.button{ href: '#', title: 'contacter par email' } contacter par email
         %button.btn.btn-primary.btn-lg.button{ 'data-toggle'=>'modal', 'data-target'=>'#contactFormSingle'} contacter par email
         %p.social
-          = link_to("LinkedIn", @profile.linked_in_url, title: 'LinkedIn', class: :linkedin) if @profile.linked_in_url.present?
-          = link_to("Twitter", @profile.twitter_url, title: 'Twitter', class: :twitter) if @profile.twitter_url.present?
-          = link_to("Facebook", @profile.facebook_url, title: 'Facebook', class: :facebook) if @profile.facebook_url.present?
-          = link_to("Google Plus", @profile.google_plus_url, title: 'Google Plus', class: :googleplus) if @profile.google_plus_url.present?
+          = link_to("LinkedIn", @profile.linked_in_url, title: 'LinkedIn', class: :linkedin, target: '_blank' ) if @profile.linked_in_url.present?
+          = link_to("Twitter", @profile.twitter_url, title: 'Twitter', class: :twitter, target: '_blank') if @profile.twitter_url.present?
+          = link_to("Facebook", @profile.facebook_url, title: 'Facebook', class: :facebook, target: '_blank') if @profile.facebook_url.present?
+          = link_to("Google Plus", @profile.google_plus_url, title: 'Google Plus', class: :googleplus, target: '_blank') if @profile.google_plus_url.present?
 
 
 = render 'pages/suggest_profile'
