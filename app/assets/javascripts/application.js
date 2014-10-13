@@ -22,9 +22,6 @@
 //= require jquery.placeholder
 
 
-
-
-
 /* Sponsor Page */
 $(window).load(function(){
   $('.partnerslide').flexslider({
@@ -82,11 +79,5 @@ $(function(){
           url: true
         }
   		}
-  });
-    $('.searchform input').keydown(function(event){
-    if(event.keyCode == 13) {
-      event.preventDefault();
-      return false;
-    }
   });
 });

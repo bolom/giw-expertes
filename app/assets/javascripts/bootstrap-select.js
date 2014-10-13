@@ -238,7 +238,7 @@
        * @returns {string}
        */
       var generateLI = function (content, index, classes) {
-        return '<li' +
+        return '<li ' +
             (typeof classes !== 'undefined' ? ' class="' + classes + '"' : '') +
             (typeof index !== 'undefined' | null === index ? ' data-original-index="' + index + '"' : '') +
             '>' + content + '</li>';
@@ -657,7 +657,14 @@
             that.setSelected(clickedIndex, true);
           } else { // Toggle the one we have chosen if we are multi select.
             $option.prop('selected', !state);
+
+            var name = $(this).parent().parent().parent().parent().parent().parent().attr('class');
+            var selected = document.getElementById(name).getElementsByClassName('selected');
+            if (selected.length >= 3) {
+              alert("Veuillez sélectionner trois compétences maximum");
+          } else {
             that.setSelected(clickedIndex, !state);
+          }
             $this.blur();
 
             if ((maxOptions !== false) || (maxOptionsGrp !== false)) {
