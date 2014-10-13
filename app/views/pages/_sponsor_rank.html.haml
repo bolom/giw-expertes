@@ -1,0 +1,5 @@
+%div.wrapper.partnerslide
+  %span.loader.circles
+  %ul.slides
+    - sponsor_rank.sort_by(&:order).each do |sponsor|
+      %li= link_to image_tag(sponsor.logo_url, alt: sponsor.name), sponsor.url, title: sponsor.name

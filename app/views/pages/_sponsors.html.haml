@@ -2,31 +2,7 @@
 
   %h2 Ils nous soutiennent
 
-  %div.wrapper.partnerslide
-    %span.loader.circles
-    %ul.slides
-      %li
-        %a{ href: '#', title: 'Title' }
-          = image_tag("http://preview.omts.fr/hosting/omts-white@2x.png", :alt => "OneMoreThing studio")
-      %li
-        %a{ href: '#', title: 'Title' }
-          = image_tag("http://www.audiovideohd.fr/i/imgs/6297-4.jpg", :alt => "Fnac")
-      %li
-        %a{ href: '#', title: 'Title' }
-          = image_tag("http://preview.omts.fr/hosting/omts-white@2x.png", :alt => "OneMoreThing studio")
-      %li
-        %a{ href: '#', title: 'Title' }
-          = image_tag("http://preview.omts.fr/hosting/omts-white@2x.png", :alt => "OneMoreThing studio")
-      %li
-        %a{ href: '#', title: 'Title' }
-          = image_tag("http://preview.omts.fr/hosting/omts-white@2x.png", :alt => "OneMoreThing studio")
-      %li
-        %a{ href: '#', title: 'Title' }
-          = image_tag("http://preview.omts.fr/hosting/omts-white@2x.png", :alt => "OneMoreThing studio")
-      %li
-        %a{ href: '#', title: 'Title' }
-          = image_tag("http://preview.omts.fr/hosting/omts-white@2x.png", :alt => "OneMoreThing studio")
-    
-    
+  = render 'pages/sponsor_rank', sponsor_rank: Sponsor.where(rank: 1)
+
   %div.clearfix
     = link_to "voir tous les mécènes", sponsors_path, :class => "button"
