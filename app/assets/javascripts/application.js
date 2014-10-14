@@ -81,6 +81,9 @@ $(function(){
         }
   		}
   });
+  $.validator.methods.equal = function(value, element, param) {
+    return value == param;
+  };
   $('#contactForm form').validate({
       rules: {
         from_email: {
@@ -94,6 +97,35 @@ $(function(){
         subject: {
           required: true,
           minlength: 2
+        },
+        math: {
+          required: true,
+          equal: 8
+        },
+        message:{
+          required: true,
+          minlength: 10
+        }
+      },
+      errorLabelContainer: $(".errorMsg ")
+  });
+  $('#contactFormSingle form').validate({
+      rules: {
+        from_email: {
+          required: true,
+          email: true
+        },
+        from_name: {
+          required: true,
+          minlength: 2
+        },
+        subject: {
+          required: true,
+          minlength: 2
+        },
+        math: {
+          required: true,
+          equal: 8
         },
         message:{
           required: true,

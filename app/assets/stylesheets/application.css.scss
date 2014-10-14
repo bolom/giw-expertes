@@ -146,7 +146,7 @@ header{
     .img{width: 100%; height: 100%; background: url(asset-path('bg-main.png')) no-repeat; position: relative; margin: 0 auto; background-position: center center; background-size: cover;
       h1{background: url(asset-path('GIW-expertes-big.png')) no-repeat; width: 330px; height: 269px; top: 65px; position: relative;}
     }
-    p{top: 125px; position: relative; text-align: center; font-size: 24px; color: white; font-weight: 100; max-width: 470px; width: 100%;}
+    p{top: 125px; position: relative; text-align: center; font-size: 24px; color: white; font-weight: 100; max-width: 670px; width: 100%;}
   }
 }
 
@@ -192,7 +192,7 @@ footer{text-align: center;
 
 .home #searchform{top: 220px;}
 .profiles #searchform,
-.sponsors #searchform{top: 40px;}
+.sponsors #searchform{top: 35px;}
 
 #byexpertise{height: 0; width: 0; position: absolute;}
 
