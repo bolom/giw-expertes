@@ -7,8 +7,10 @@
         %div.modal-body
           %input{ type: 'hidden', value: @profile.id, name: 'profile_id' }
           %input{ type: 'email', value: '', name: 'from_email', id: 'email', placeholder: 'votre email'}
-          %input{ type: 'name', value: '', name: 'from_name', id: 'name', placeholder: 'votre nom' }
+          %input{ type: 'text', value: '', name: 'from_name', id: 'name', placeholder: 'votre nom' }
           %input{ type: 'text', value: '', name: 'subject', id: 'subject', placeholder: 'sujet du message' }
+          %input{ type: 'text', value: '', name: 'math', id: 'math', placeholder: 'additionnez 2+6' }
           %textarea{ placeholder: 'votre message', name: 'message' }
+          %p.errorMsg
         %div.modal-footer
           %button.btn.btn-primary Envoyer
