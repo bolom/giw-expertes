@@ -16,8 +16,6 @@
         - @profile.skills.limit(3).each do |skill|
           %li= link_to skill.label, profiles_path(byexpertise: [skill.id]), title: skill.label, class: :tag
 
-      .linked_in_url= link_to @profile.linked_in_url
-
       %div.contact
         /%a.btcontact.button{ href: '#', title: 'contacter par email' } contacter par email
         %button.btn.btn-primary.btn-lg.button{ 'data-toggle'=>'modal', 'data-target'=>'#contactFormSingle'} contacter par email
