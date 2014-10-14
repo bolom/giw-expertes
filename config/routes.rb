@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :profiles do
     get :created, on: :member
   end
+  get 'skills/:id' => 'profiles#index', as: :skill
 
   root to: "pages#home"
   get 'sponsors' => 'pages'
@@ -12,7 +13,6 @@ Rails.application.routes.draw do
   resources :contacts, only: [] do
     post :message_to_giw, :message_to_profile, on: :collection
   end
-
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

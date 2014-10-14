@@ -8,4 +8,8 @@ class Profile < ActiveRecord::Base
   def full_name
     "#{firstname} #{lastname}"
   end
+
+  def to_param
+    "#{full_name.parameterize}-#{id}"
+  end
 end

@@ -12,14 +12,16 @@ class ProfilesController < ApplicationController
       )
     end
 
-    if params[:byexpertise].present?
-      @skills = Skill.find(params[:byexpertise])
+    @skills = Skill.find(params[:byexpertise]) if params[:byexpertise].present?
+    @skills ||= [Skill.find(params[:id].split('-').last)] if params[:id].present?
+
+    if @skills.present?
       @profiles = @profiles.joins(:skills).where(skills: { id: @skills.map(&:id) })
     end
   end
 
   def show
-    @profile = Profile.active.find(params[:id])
+    @profile = Profile.active.find(params[:id].split('-').last)
   end
 
   def create

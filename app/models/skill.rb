@@ -5,4 +5,8 @@ class Skill < ActiveRecord::Base
   def to_label
     "#{id} - #{label}"
   end
+
+  def to_param
+    "#{label.parameterize}-#{id}"
+  end
 end

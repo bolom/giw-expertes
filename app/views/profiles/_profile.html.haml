@@ -8,4 +8,4 @@
   %span.line
   %ul
     - profile.skills.limit(3).each do |skill|
-      %li= link_to skill.label, profiles_path(byexpertise: [skill.id]), title: skill.label
+      %li= link_to skill.label, skill_path(skill), title: skill.label
