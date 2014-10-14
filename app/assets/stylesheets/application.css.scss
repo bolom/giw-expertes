@@ -140,7 +140,7 @@ header{
 .home{
   .main{width: 100%; height: 733px; background: $blue;
     .img{width: 100%; height: 100%; background: url(asset-path('bg-main.png')) no-repeat; position: relative; margin: 0 auto; background-position: center center; background-size: cover;
-      h1{background: url(asset-path('big-giw.png')) no-repeat; width: 330px; height: 212px; top: 85px; position: relative;}
+      h1{background: url(asset-path('GIW-expertes-big.png')) no-repeat; width: 330px; height: 269px; top: 65px; position: relative;}
     }
     p{top: 125px; position: relative; text-align: center; font-size: 24px; color: white; font-weight: 100; max-width: 470px; width: 100%;}
   }
@@ -149,7 +149,7 @@ header{
 .profiles, .sponsors{
   .main{width: 100%; height: 207px; background: $blue;
     .img{width: 100%; height: 207px; background: url(asset-path('bg-top-small.png')) repeat-x;
-      h1 a{background: url(asset-path('GIW-expert-small.png')) no-repeat; width: 168px; height: 100px; top: 20px; position: relative; display: block; margin: 0 auto;}
+      h1 a{background: url(asset-path('GIW-expertes-small.png')) no-repeat; width: 156px; height: 108px; top: 20px; position: relative; display: block; margin: 0 auto;}
     }
     p{display: none;}
   }
@@ -207,7 +207,7 @@ footer{text-align: center;
 
   /* BOOTSTRAP */
   .show-tick{height: 56px; width: 340px; margin: 0; padding: 0; position: relative; border-radius: 0;}
-  button.btn.dropdown-toggle.selectpicker.btn-default{border-radius: 0; width: 340px; margin: 0; border: 0; font-size: 26px; color: $bluestrong; border-color: white; padding: 0 12px; line-height: 56px;}
+  button.btn.dropdown-toggle.selectpicker.btn-default{border-radius: 0 !important; width: 340px; margin: 0; border: 0; font-size: 26px; color: $bluestrong; border-color: white; padding: 0 12px; line-height: 56px; background: white !important;}
   .bootstrap-select.btn-group .btn .filter-option{}
   .btn-group.open .dropdown-toggle{box-shadow: inset 0px 0px 5px $pink; outline: none !important; -webkit-appearance: none;}
   .bootstrap-select .btn:focus{outline: none; -webkit-appearance: none;}
@@ -704,11 +704,11 @@ only screen and ( min-device-pixel-ratio: 2),
 only screen and ( min-resolution: 192dpi),
 only screen and ( min-resolution: 2dppx){
 
-.home .main .img h1{background: url(asset-path('big-giw@2x.png')) no-repeat; background-size: contain;}
+.home .main .img h1{background: url(asset-path('GIW-expertes-big@2x.png')) no-repeat; background-size: contain;}
 
 .profiles .main, .sponsors .main{
   .img{background: url(asset-path('bg-top-small@2x.png')) repeat-x; background-size: 210px 207px;
-      h1 a{background: url(asset-path('GIW-expert-small@2x.png')) no-repeat; background-size: contain;}
+      h1 a{background: url(asset-path('GIW-expertes-small@2x.png')) no-repeat; background-size: contain;}
   }
 }
 
