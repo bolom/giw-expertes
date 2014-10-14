@@ -81,6 +81,27 @@ $(function(){
         }
   		}
   });
+  $('#contactForm form').validate({
+      rules: {
+        from_email: {
+          required: true,
+          email: true
+        },
+        from_name: {
+          required: true,
+          minlength: 2
+        },
+        subject: {
+          required: true,
+          minlength: 2
+        },
+        message:{
+          required: true,
+          minlength: 10
+        }
+      },
+      errorLabelContainer: $(".errorMsg ")
+  });
 });
 
 /* Contact Modals Callback */
@@ -88,10 +109,12 @@ $(document).ready(function(){
   $('#contactForm form').on("ajax:success", function(e, data, status, xhr) {
     // Display confirmation message
     $('#contactForm').modal('hide');
+    $("#contactMsg").show().delay(5000).fadeOut();
   });
 
   $('#contactFormSingle form').on("ajax:success", function(e, data, status, xhr) {
     // Display confirmation message
     $('#contactFormSingle').modal('hide');
+    $("#contactMsg").show().delay(5000).fadeOut();
   });
 })

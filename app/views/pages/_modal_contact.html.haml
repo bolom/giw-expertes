@@ -6,8 +6,9 @@
           %h4#contactFormTitle.modal-title Contactez-nous !
         %div.modal-body
           %input{ type: 'email', value: '', name: 'from_email', id: 'email', placeholder: 'votre email'}
-          %input{ type: 'name', value: '', name: 'from_name', id: 'name', placeholder: 'votre nom' }
+          %input{ type: 'text', value: '', name: 'from_name', id: 'name', placeholder: 'votre nom' }
           %input{ type: 'text', value: '', name: 'subject', id: 'subject', placeholder: 'sujet du message' }
           %textarea{ placeholder: 'votre message', name: 'message' }
+          %p.errorMsg
         %div.modal-footer
           %button.btn.btn-primary Envoyer

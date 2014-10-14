@@ -107,6 +107,10 @@ section{padding: 50px 0; text-align: center;
 ::selection{background: rgba(0,0,0,0.6); color: white;}
 ::-moz-selection{background: rgba(0,0,0,0.6); color: white;}
 
+.alert{position: fixed; top: 20px; right: 50px; z-index: 100000;
+  p{margin: 0 0 10px 0; font-size: 16px; font-weight: 700;}
+}
+
 /*
 ----------------------------------
   NAVIGATION
@@ -528,6 +532,8 @@ footer{text-align: center;
 .modal-body{padding: 20px; box-sizing: border-box; font-size: 16px; color: $bluestrong; text-align: center;
   input{width: 100%; max-width: 300px; display: block; text-align: left; border: 0; height: 40px; background: #e8faff; margin: 0 auto 10px auto; padding: 10px 20px;}
   textarea{width: 100%; max-width: 300px; height: 200px; display: block; text-align: left; background: #e8faff; border: 0; margin: 0 auto; padding: 20px;}
+  input.error, textarea.error{border: 1px solid $pink;}
+  .errorMsg label{display: block; font-size: 12px; color: $pink;}
 }
 .modal-body{max-height: 500px; overflow: auto;}
 
