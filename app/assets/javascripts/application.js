@@ -82,3 +82,16 @@ $(function(){
   		}
   });
 });
+
+/* Contact Modals Callback */
+$(document).ready(function(){
+  $('#contactForm form').on("ajax:success", function(e, data, status, xhr) {
+    // Display confirmation message
+    $('#contactForm').modal('hide');
+  });
+
+  $('#contactFormSingle form').on("ajax:success", function(e, data, status, xhr) {
+    // Display confirmation message
+    $('#contactFormSingle').modal('hide');
+  });
+})

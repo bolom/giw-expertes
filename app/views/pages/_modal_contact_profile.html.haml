@@ -1,13 +1,14 @@
 %div#contactFormSingle.modal.fade{ tabindex: '-1', role: 'dialog', 'aria-labelledby'=>'myModalLabelSingle', 'aria-hidden'=>'true' }
   %div.modal-dialog
     %div.modal-content
-      %div.modal-header
-        %h4#contactFormTitle.modal-title Contactez l'experte
-      %div.modal-body
-        %form
-          %input{ type: 'email', value: '', name: 'email', id: 'email', placeholder: 'votre email'}
-          %input{ type: 'name', value: '', name: 'name', id: 'name', placeholder: 'votre nom' }
+      = form_tag message_to_profile_contacts_path, remote: true do
+        %div.modal-header
+          %h4#contactFormTitle.modal-title Contactez l'experte
+        %div.modal-body
+          %input{ type: 'hidden', value: @profile.id, name: 'profile_id' }
+          %input{ type: 'email', value: '', name: 'from_email', id: 'email', placeholder: 'votre email'}
+          %input{ type: 'name', value: '', name: 'from_name', id: 'name', placeholder: 'votre nom' }
           %input{ type: 'text', value: '', name: 'subject', id: 'subject', placeholder: 'sujet du message' }
-          %textarea{ placeholder: 'votre message' }
-      %div.modal-footer
-        %button.btn.btn-primary Envoyer
+          %textarea{ placeholder: 'votre message', name: 'message' }
+        %div.modal-footer
+          %button.btn.btn-primary Envoyer

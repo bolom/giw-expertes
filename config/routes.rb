@@ -3,12 +3,16 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
 
   resources :profiles do
-    get :created, on: :member 
+    get :created, on: :member
   end
 
   root to: "pages#home"
   get 'sponsors' => 'pages'
   get 'contact'  => 'pages'
+  resources :contacts, only: [] do
+    post :message_to_giw, :message_to_profile, on: :collection
+  end
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
