@@ -1,3 +1,7 @@
+- @page_title = @profile.full_name
+- @page_description = "Page profil de #{@profile.full_name}, experte #{@profile.skills.map(&:label).join(', ')}; Les Expertes du Numérique"
+- @page_keywords = ([@profile.full_name, @profile.firstname, @profile.lastname] + @profile.skills.map(&:label) + ["expertes", "numérique", "expertes numérique"]).join(',')
+
 %section#theprofile
   %div.wrapper.clearfix.webkit
     %div.left.box
