@@ -4,7 +4,7 @@
     %meta{ charset: "utf-8" }
     %meta{ 'http-equiv' => "X-UA-Compatible", content: "IE=edge" }
     %meta{ name: "viewport", content: "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" }
-    
+
     %link{rel: 'apple-touch-icon', sizes: '57x57', href: image_path('_favicons/apple-touch-icon-57x57.png') }
     %link{rel: 'apple-touch-icon', sizes: '114x114', href: image_path('_favicons/apple-touch-icon-114x114.png') }
     %link{rel: 'apple-touch-icon', sizes: '72x72', href: image_path('_favicons/apple-touch-icon-72x72.png') }
@@ -14,28 +14,35 @@
     %link{rel: 'apple-touch-icon', sizes: '76x76', href: image_path('_favicons/apple-touch-icon-76x76.png') }
     %link{rel: 'apple-touch-icon', sizes: '152x152', href: image_path('_favicons/apple-touch-icon-152x152.png') }
     %link{rel: 'apple-touch-icon', sizes: '180x180', href: image_path('_favicons/apple-touch-icon-180x180.png') }
-    
+
     %link{rel: 'icon', type: 'image/png', sizes: '192x192', href: image_path('_favicons/favicon-192x192.png') }
     %link{rel: 'icon', type: 'image/png', sizes: '160x160', href: image_path('_favicons/favicon-160x160.png') }
     %link{rel: 'icon', type: 'image/png', sizes: '96x96', href: image_path('_favicons/favicon-96x96.png') }
     %link{rel: 'icon', type: 'image/png', sizes: '16x16', href: image_path('_favicons/favicon-16x16.png') }
     %link{rel: 'icon', type: 'image/png', sizes: '32x32', href: image_path('_favicons/favicon-32x32.png') }
-    
+
     %meta{ name: 'msapplication-TileColor', content: '#0cbef0' }
     %meta{ name: 'msapplication-TileImage', content: image_path('_favicons/mstile-144x144.png') }
-    
+
     /[if lt IE 9]
       %script{ src: 'http://html5shiv.googlecode.com/svn/trunk/html5.js' }
     /[endif]
-    
-    
-    %title Les Expertes du Numérique
+
+    %title
+      - if @page_title.present?
+        = "#{@page_title} | "
+      Les Expertes du Numérique
+    - if @page_description.present?
+      %meta{ name: "description", content: @page_description }
+    - if @page_keywords.present?
+      %meta{ name: "keywords", content: @page_keywords }
+
     = stylesheet_link_tag    'application', media: 'all'
     = javascript_include_tag 'application'
     = csrf_meta_tags
 
   %body{ class: "#{controller_name} #{action_name}" }
-  
+
     %header
       %div#topnav
         %div.wrapper
@@ -50,18 +57,18 @@
               %a{ href: 'http://girlzinweb.com/auteures/', title: 'Auteures' } Auteures
             %li
               %a{ href: 'http://girlzinweb.com/adherent-e-s-giw/', title: 'Accès Adhérent-e-s GIW' } Accès Adhérent-e-s GIW
-            
+
       %div.main
         %div.img
           %h1= link_to "Les Expertes du Numérique", root_path
           %p.wrapper
             Vestibulum id ligula porta felis euismod semper. Donec id elit non mi porta gravida at eget metus.
-      
-          
+
+
           = render 'pages/profile_search_form'
-          
+
     = yield
-      
+
     %nav#mobilenav.navbar.navbar-default{ role: 'navigation' }
       %ul
         %li.normal
@@ -82,7 +89,7 @@
           %a{ href: 'http://girlzinweb.com/auteures/', title: 'Auteures' } Auteures
         %li.little
           %a{ href: 'http://girlzinweb.com/adherent-e-s-giw/', title: 'Accès Adhérent-e-s GIW' } Accès Adhérent-e-s GIW
-    
+
 
     %footer
       %nav#footernav
@@ -102,8 +109,5 @@
         © Girlz in web
         = Date.current.year
         — tous droits réservés
-              
-    /%a#up top
 
-      
-    
+    /%a#up top
