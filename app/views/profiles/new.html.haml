@@ -1,3 +1,5 @@
+- @page_title = "Soumettre une experte"
+
 %section#profilesSubmit
 
   %h2 Soumettre une experte
@@ -140,7 +142,7 @@
           %span.pink *
 
         %div.form-group.selectbox{id: 'form-group selectbox'}
-        
+
           %select{ id: 'selectSkills', name: 'profile[skill_ids][]', multiple: true, class: 'form-control input-sm selectpicker', value: '', 'data-max-options'=>'3' }
 
             - Domain.all.each do |domain|
