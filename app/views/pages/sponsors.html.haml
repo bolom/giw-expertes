@@ -4,5 +4,6 @@
   %h2 Ils nous soutiennent
 
   - ranks = { one: 1, two: 2, three: 3, four: 4, five: 5 }.each do |rank_name, rank|
-    %div{ id: "partners#{rank_name.capitalize}" }
-      = render 'pages/sponsor_rank', sponsor_rank: @sponsors_by_rank[rank]
+    - if @sponsors_by_rank[rank].present?
+      %div{ id: "partners#{rank_name.capitalize}" }
+        = render 'pages/sponsor_rank', sponsor_rank: @sponsors_by_rank[rank]

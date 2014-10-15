@@ -5,7 +5,8 @@
 
 /= render 'pages/about'
 
-= render 'pages/sponsors'
+- if Sponsor.where(rank: 1).present?
+  = render 'pages/sponsors'
 
 = render 'pages/contact'
 
