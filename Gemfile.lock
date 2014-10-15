@@ -152,6 +152,10 @@ GEM
     rack (1.5.2)
     rack-test (0.6.2)
       rack (>= 1.0)
+    rack-tracker (0.2.4)
+      activesupport (>= 4.0.0)
+      rack (>= 1.5.2)
+      tilt (~> 1.4.1)
     rails (4.1.6)
       actionmailer (= 4.1.6)
       actionpack (= 4.1.6)
@@ -244,6 +248,7 @@ DEPENDENCIES
   pg
   postmark-rails
   puma
+  rack-tracker
   rails (= 4.1.6)
   rails_12factor
   randumb

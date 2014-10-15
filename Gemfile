@@ -52,6 +52,7 @@ gem 'kaminari'
 gem 'kaminari-bootstrap'
 gem 'linkedin-scraper'
 gem 'postmark-rails'
+gem 'rack-tracker'
 
 group :development, :test do
   gem 'sqlite3'
