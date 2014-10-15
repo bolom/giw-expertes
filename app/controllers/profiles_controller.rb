@@ -1,7 +1,7 @@
 class ProfilesController < ApplicationController
   def index
     table = Profile.arel_table
-    @profiles = Profile.active.includes(:skills).page(params[:page]).per(16)
+    @profiles = Profile.active.page(params[:page]).per(16)
 
     if params[:byname].present?
       @names = params[:byname].split(' ')
@@ -16,7 +16,7 @@ class ProfilesController < ApplicationController
     @skills ||= [Skill.find(params[:id].split('-').last)] if params[:id].present?
 
     if @skills.present?
-      @profiles = @profiles.joins(:skills).where(skills: { id: @skills.map(&:id) })
+      @profiles = @profiles.joins(:skills).where(skills: { id: @skills.map(&:id) }).group('profiles.id').order('COUNT(skills.id) DESC')
     end
   end
 
