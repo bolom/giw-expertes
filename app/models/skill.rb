@@ -6,7 +6,7 @@ class Skill < ActiveRecord::Base
     "#{id} - #{label}"
   end
 
-  def to_param
+  def to_url
     "#{label.parameterize}-#{id}"
   end
 end

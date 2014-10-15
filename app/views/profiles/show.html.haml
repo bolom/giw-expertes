@@ -18,7 +18,7 @@
         = @profile.last_position
       %ul.expert.clearfix
         - @profile.skills.limit(3).each do |skill|
-          %li= link_to skill.label, skill_path(skill), title: skill.label, class: :tag
+          %li= link_to skill.label, skill_path(skill.to_url), title: skill.label, class: :tag
 
       %div.contact
         /%a.btcontact.button{ href: '#', title: 'contacter par email' } contacter par email
@@ -35,7 +35,7 @@
 = render 'pages/modal_contact'
 
 = render 'pages/modal_contact_profile'
-  
+
 %div#contactMsg.alert.alert-success{ role: 'alert', style: 'display: none;'}
   %p
     Votre message a bien été envoyé.

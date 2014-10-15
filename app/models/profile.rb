@@ -9,7 +9,7 @@ class Profile < ActiveRecord::Base
     "#{firstname} #{lastname}"
   end
 
-  def to_param
+  def to_url
     "#{full_name.parameterize}-#{id}"
   end
 end
