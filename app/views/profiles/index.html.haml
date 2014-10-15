@@ -1,5 +1,5 @@
 - @page_title = "Recherche"
-- @page_keywords = (@names + @skills.map(&:label) + ["expertes", "numérique", "expertes numérique"]).join(',')
+- @page_keywords = ((@names || []) + (@skills || []).map(&:label) + ["expertes", "numérique", "expertes numérique"]).join(',')
 
 %section#profilesList
 
