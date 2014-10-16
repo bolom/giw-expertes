@@ -426,7 +426,7 @@ footer{text-align: center;
 }
 
 .requiredMsg{display: block; clear: both; width: 100%; position: relative; text-align: center;
-  p{background: $pink; color: white; padding: 10px 20px; display: inline-block; font-weight: 700; font-size: 12px !important; text-align: center; position: relative;}
+  p{border: 1px solid $pink; color: $pink; padding: 10px 20px; display: inline-block; font-weight: 700; font-size: 12px !important; text-align: center; position: relative;}
 }
 
 .why{position: fixed; display: block; font-size: 14px; color: $pink; min-width: 300px; background: white; box-shadow: 0px 0px 10px black; border: 1px solid $pink; min-height: 300px; right: 20px; top: 20%; padding: 20px; display: none;
