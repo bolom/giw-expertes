@@ -455,13 +455,14 @@ footer{text-align: center;
 #partnersFive{background: #797c7d;}
 
 .partnerslide{padding: 50px 0; vertical-align: middle; position: relative; height: 300px; width: 100%;
-  .slides{height: 200px; text-align: center; z-index: 1;}
+  .flex-viewport{z-index:1;}
+  .slides{height: 200px; text-align: center;}
   li{width: 250px; height: 200px; vertical-align: middle; position: relative; text-align: center; padding: 0 10px; box-sizing: border-box;
-    a{width: 200px; height: 200px; position: relative; line-height: 200px; display: inline-block;
+    a{width: 200px; height: 200px; position: relative; line-height: 200px; display: inline-block; z-index: 2;
       img{width: 100%; height: auto;}
     }
   }
-  .flex-direction-nav{position: absolute; top: 145px; width: 100%;
+  .flex-direction-nav{position: absolute; top: 145px; width: 100%; z-index: 0;
     li{height: 52px; position: relative; display: block; float: left; width: 50%; margin: 0; padding: 0;
       a{text-indent: -9999px; display: block; width: 26px; height: 52px; z-index: 2; top: 0; opacity: 1;}
       .flex-prev{background: url(asset-path('nav-left.png')) no-repeat; float: left; content: ""; left: -40px;}
