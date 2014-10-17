@@ -3,7 +3,11 @@
     %div.modal-content
       = form_tag message_to_profile_contacts_path, remote: true do
         %div.modal-header
-          %h4#contactFormTitle.modal-title Contactez l'experte
+          %div.clearfix
+            %h4#contactFormTitle.modal-title Contactez l'experte
+            %button{ type:'button', class:'close', 'data-dismiss'=>'modal'}
+              %span{ 'aria-hidden'=>'true' } &times;
+              %span.sr-only Close
         %div.modal-body
           %input{ type: 'hidden', value: @profile.id, name: 'profile_id' }
           %input{ type: 'email', value: '', name: 'from_email', id: 'email', placeholder: 'votre email', 'data-msg-required'=>'Veuillez saisir votre adresse email.'}
