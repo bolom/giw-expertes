@@ -56,6 +56,21 @@
       %div.subsections.publications.clearfix
         %h3 Expertise
 
+
+        %h4.clearfix Compétences
+        %p
+          Sélectionnez les compétences clés de votre experte (3 compétences maximum)
+          %span.pink *
+
+        %div.form-group.selectbox{id: 'form-group selectbox'}
+
+          %select{ id: 'selectSkills', name: 'profile[skill_ids][]', multiple: true, class: 'form-control input-sm selectpicker', value: '', 'data-max-options'=>'3' }
+
+            - Domain.all.each do |domain|
+              %optgroup{ label: domain.label }
+                - domain.skills.each do |skill|
+                  %option{ value: skill.id }= skill.label
+
         %h4.clearfix Publications
         %p
           L'experte a-t-elle déjà publié un article sur un site web ou un blog pro/spécialisé ?
@@ -135,20 +150,6 @@
             %span.glyphicon.glyphicon-link
             %input{ type: 'text', name: 'profile[open_source_url_3]', value: '', placeholder: 'le lien vers un troisième projet' }
 
-      %div.subsections.tags.clearfix
-        %h3 Les mots clés
-        %p
-          Sélectionnez les compétences clés de votre experte (3 compétences maximum)
-          %span.pink *
-
-        %div.form-group.selectbox{id: 'form-group selectbox'}
-
-          %select{ id: 'selectSkills', name: 'profile[skill_ids][]', multiple: true, class: 'form-control input-sm selectpicker', value: '', 'data-max-options'=>'3' }
-
-            - Domain.all.each do |domain|
-              %optgroup{ label: domain.label }
-                - domain.skills.each do |skill|
-                  %option{ value: skill.id }= skill.label
 
       %div.subsections.complement.clearfix
         %h3 Informations complémentaires
