@@ -387,6 +387,8 @@ footer{text-align: center;
   input.error::-moz-placeholder{color: white;}
   input.error:-ms-input-placeholder{color: white;}
 
+  .competences{width: 100%; max-width: 400px;}
+
   .subsections{width: 100%;
     .left{position: relative; float: left; width: 200px; margin: 0 0 0 50px; max-width: 100%;
       label{margin: 0 20px 0 5px; position: relative;}

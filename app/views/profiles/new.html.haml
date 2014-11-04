@@ -60,7 +60,7 @@
           %input{ name: 'profile[last_position]', value: '', placeholder: 'dernier poste occupé *', class: "position", type: 'text', 'data-rule-required'=>'true', 'data-msg-required'=>' ' }
 
       %div.subsections.publications.clearfix
-        %h3 Expertise
+        %h3 Expertise(s)
 
         %p.clearfix.little.blue
           Merci d'indiquer des liens en rapport direct avec chacune des expertises proposées.
@@ -70,7 +70,7 @@
           Sélectionnez les compétences clés de votre experte (3 compétences maximum)
           %span.pink *
 
-        %div.form-group.selectbox{id: 'form-group selectbox'}
+        %div.form-group.selectbox.competences{id: 'form-group selectbox'}
 
           %select{ id: 'selectSkills', name: 'profile[skill_ids][]', multiple: true, class: 'form-control input-sm selectpicker', value: '', 'data-max-options'=>'3' }
 
