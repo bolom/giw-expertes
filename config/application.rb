@@ -23,6 +23,9 @@ module GIWExpertes
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
 
+    config.action_mailer.delivery_method = :postmark
+    config.action_mailer.postmark_settings = { :api_token => Rails.application.secrets.postmark_api_token }
+    
     config.middleware.use(Rack::Tracker) do
       handler :google_analytics, { tracker: ENV['GOOGLE_ANALYTICS_TRACKER'] }
     end if ENV['GOOGLE_ANALYTICS_TRACKER']
